@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MyDay } from './components/MyDay'
 import { MyDay2 } from './components/MyDay2'
-import './App.css';
+// import './App.css';
 
 export const App = () => {
   return (
