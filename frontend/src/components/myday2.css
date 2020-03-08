@@ -28,3 +28,29 @@ input.questions2 {
     margin-right: 20px;
     margin-bottom: 10px;
 }
+
+/* ******Back link css ********* */
+
+.myDay2Container .backLink {
+    position: absolute;
+    display: inline-flex;
+    color: black;
+    align-items: center;
+    font-weight: 700;
+    text-decoration: none;
+    left: 50px;
+    top: 20px;
+}
+
+.backLinkImg {
+    width: 10%;
+}
+
+.backLink:hover svg {
+    margin-right: 10px;
+}
+
+/*makes the button move to the side when hover*/
+.myDay2Container .backLink svg {
+    transition: margin-right .3s ease-in-out;  
+}
