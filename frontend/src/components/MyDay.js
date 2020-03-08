@@ -23,9 +23,11 @@ export const MyDay = () => {
     // function goBack() {
     //     window.history.back();
     //   }
-
+ 
     return (
-
+        // <div className="headerInfo">
+        //     <h1>My Day </h1>   
+        // </div>
         <div className="myDayContainer">
             {photos.map((photo) => (
                 <div className="myDayPhotos" key={photo.id}>
