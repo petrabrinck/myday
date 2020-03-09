@@ -7,21 +7,22 @@ const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/myday'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
-// const Reflection = mongoose.model('Reflection', {
-//   message: {
-//     type: String,
-//     required: true,
-//     minlength: 5,
-//     maxlength: 140
-//   },
+const Reflection = mongoose.model('Reflection', {
+  message: {
+    type: String,
+    required: true,
+    minlength: 5,
+    maxlength: 140
+  },
 
-//   checkbox: { 
-//     type: String,
-//     // required: true,
-//     enum: ['Happy', 'Worried', 'Strong', 'Sad'],
-//     placeholder: "Text",
-//     forceField: "checkbox"
-// },
+  // checkbox: { 
+  //   type: String,
+  //   // required: true,
+  //   enum: ['Happy', 'Worried', 'Strong', 'Sad'],
+  //   placeholder: 'Text',
+  //   forceField: 'checkbox'
+  
+})
 
   // hearts: {
   //   type: Number,
@@ -76,7 +77,7 @@ app.get('/', (req, res) => {
 //     res.status(201).json(savedReflection)
 // })
 
-
+// hej hej //
 
 // Start the server
 app.listen(port, () => {

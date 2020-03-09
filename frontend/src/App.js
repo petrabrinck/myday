@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MyDay } from './components/MyDay'
 import { Header } from './components/Header'
 import { MyDay2 } from './components/MyDay2'
+import { MyDayForm } from './components/MyDayForm'
 
 // import './App.css';
 
@@ -47,6 +48,7 @@ export const App = () => {
           {/* <Route path="/photos/:photoId"> */}
           {/* <MyDay2 /> */}
           <MyDay2 onFormSubmit={handleFormSubmit} />
+          <MyDayForm />
         </Route>
       </Switch>
     </BrowserRouter>
