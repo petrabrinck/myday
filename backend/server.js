@@ -22,17 +22,17 @@ const Reflection = mongoose.model('Reflection', {
   //   placeholder: 'Text',
   //   forceField: 'checkbox'
   
-})
+// })
 
   // hearts: {
   //   type: Number,
   //   default: 0
   // },
-//   createdAt: {
-//     type: Date,
-//     default: Date.now
-//   }
-// })
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+})
 // Defines the port the app will run on. Defaults to 8080, but can be 
 // overridden when starting the server. For example:
 //
@@ -49,27 +49,27 @@ app.get('/', (req, res) => {
   res.send('Hello world')
 })
 
-// //Theresa added down below from 51-55
-// app.get('/', async (req, res) => {
-//   const reflections = await Reflection.find().sort({createdAt: 'desc'}).limit(140).exec()
-//   res.json(reflections)
-// })
+//Theresa added down below from 51-55
+app.get('/', async (req, res) => {
+  const reflections = await Reflection.find().sort({createdAt: 'desc'}).limit(140).exec()
+  res.json(reflections)
+})
 
-// app.post('/', async (req, res) => {
-//   //Retrieve the information sent by the client to our API endpoint
-//   const {message} = req.body
+app.post('/', async (req, res) => {
+  //Retrieve the information sent by the client to our API endpoint
+  const {message} = req.body
 
-//   //Use our mongoose model to create the database entry
-//   const reflection = new Reflection({message})
+  //Use our mongoose model to create the database entry
+  const reflection = new Reflection({message})
 
-//   try {
-//     //Success
-//     const savedReflection = await reflection.save()
-//     res.status(201).json(savedReflection)
-//   }catch (err) {
-//     res.status(400).json({message: 'Could not save your reflection', error: err.errors}) 
-//   }
-// })
+  try {
+    //Success
+    const savedReflection = await reflection.save()
+    res.status(201).json(savedReflection)
+  }catch (err) {
+    res.status(400).json({message: 'Could not save your reflection', error: err.errors}) 
+  }
+})
 
 // app.post('/reflection', async (req, res) => {
 //     const reflection = new Reflection({ message }) // removed checkbox allt här som ska sparas

@@ -7,8 +7,8 @@
 
 .form {
     background-color: #e5faf5;;
-    border: 2px solid black;
-    box-shadow: 4px 4px black;
+    border: 1px solid darkslategrey;
+    border-radius: 7px;
     width: 300px;
     margin: 16px;
     display: flex;
@@ -24,23 +24,26 @@
     font-size: 16px;
     box-sizing: border-box;
     margin: 10px 0;
-    /* font-family: "Courier", monospace; */
   }
   
-  .form h3 {
+  .form h4 {
     margin: 0;
-    /* font-family: "Courier", monospace; */
+  }
+
+  .form p {
+    margin: auto;
   }
   
   .form button {
-    height: 45px;
-    width: 78%;
+    height: 25px;
+    width: 28%;
     background-color: #80f8e6;
     border: none;
+    border-radius: 7px;
     font-size: 12px;
-    border-radius: 25px;
-    /* font-family: "Courier", monospace; */
-    color: black;
+    color: darkslategrey;
+    align-content: center;
+    display: inline-grid; 
   }
   
   .form button:hover {
@@ -49,7 +52,8 @@
   
   .form-footer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: left;
+    
     width: 100%;
+    margin-bottom: 10px;
   }

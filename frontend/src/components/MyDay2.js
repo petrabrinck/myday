@@ -14,6 +14,7 @@ export const MyDay2 = () => {
     const { myDay2 } = useParams()
     const [questions1, setQuestions1] = useState()
     const [questions2, setQuestions2] = useState()
+    const [name, setName] = useState("");
     const [photo, setPhoto] = useState([])
 
     return (
@@ -21,7 +22,36 @@ export const MyDay2 = () => {
             <div className="header2">
                 <h1>Hey there beautiful!</h1>
                 <p>How was your day?</p>
+            </div>   
+            {/* Added */}
+            <div className="nameBox">
+                Your name:
+                <input
+                    className="formField"
+                    type="text"
+                    onChange={event => setName(event.target.value)}
+                    value={name}
+                />
             </div>
+            <div className="nameBox">
+                Your name:
+                <input
+                    className="formField"
+                    type="text"
+                    onChange={event => setName(event.target.value)}
+                    value={name}
+                />
+            </div>
+            <div className="nameBox">
+                Your name:
+                <input
+                    className="formField"
+                    type="text"
+                    onChange={event => setName(event.target.value)}
+                    value={name}
+                />
+            </div>
+           
             <div className="Questions1">
                 {questionsGroup.map(group => (
                     <label key={group}>
@@ -66,36 +96,3 @@ export const MyDay2 = () => {
     )
 }
  
-
-export const MyDayForm = props => {
-  const [message, setMessage] = useState("")
-  const handleSubmit = event => {
-    event.preventDefault()
-    props.onFormSubmit(message) // this onFormSubmit comes as a props from App.js
-    setMessage("")
-  }
-
-    return ( 
-        <section>
-    <form className='form'>
-      <h3>What's making you happy right now?</h3>
-      <textarea
-        rows='3'
-        onChange={event => setMessage(event.target.value)}
-      ></textarea>
-      <div className='form-footer'>
-        <button 
-          className='form-button'
-          type='submit'
-          onClick={handleSubmit}
-          disabled={message.length < 6 || message.length > 140 ? true : false}
-        >
-        </button>
-        <p>{message.length} / 140</p>
-      </div>
-    </form>
-    </section>
- )
- } 
-
-    
