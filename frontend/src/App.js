@@ -46,7 +46,6 @@ export const App = () => {
         </Route>
         <Route path="/photos/:myday2/">
           {/* <Route path="/photos/:photoId"> */}
-          {/* <MyDay2 /> */}
           <MyDay2 onFormSubmit={handleFormSubmit} />
           <MyDayForm />
         </Route>
