@@ -3,9 +3,9 @@ import './myday.css'
 import { Link } from 'react-router-dom'
 
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
-const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=25&page=1"
+const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=2&page=1"
 
-export const MyDay = () => {
+export const MyDay = ({data}) => {
   const [photos, setPhotos] = useState([])
 
   useEffect(() => {
@@ -20,7 +20,8 @@ export const MyDay = () => {
   // function goBack() {
   //     window.history.back();
   //   }
-
+  console.log(data)
+  console.log(photos)
   return (
 
     <div className="myDayContainer">

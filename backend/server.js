@@ -45,10 +45,6 @@ app.use(cors())
 app.use(bodyParser.json())
 
 // Start defining your routes here
-app.get('/', (req, res) => {
-  res.send('Hello world')
-})
-
 //Theresa added down below from 51-55
 app.get('/', async (req, res) => {
   const reflections = await Reflection.find().sort({createdAt: 'desc'}).limit(140).exec()

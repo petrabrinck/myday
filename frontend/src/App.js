@@ -9,7 +9,7 @@ import { NewDay } from './components/NewDay'
 // import './App.css';
 
 // const url = "https://project-happy-thoughts-api.herokuapp.com/"
-const url = "https://localhost:8080/reflection"
+const url = "http://localhost:9000/"
 
 //Theresa added const checkboxes down below
 //If time ask Jennie about down below sign
@@ -22,8 +22,8 @@ export const App = () => {
     fetch(url)
       .then(res => res.json())
       .then(json => setReflections(json))
-  }, [postedReflection])
-
+  }, [])
+console.log(reflections)
   //Theresa changed from reflection to message down below
   const handleFormSubmit = message => {
     fetch(url, {
@@ -44,7 +44,7 @@ export const App = () => {
         <Route path="/" exact> 
           <Header />
           <NewDay />
-          <MyDay />
+          <MyDay data={reflections}/>
         </Route>
         <Route path="/photos/:myday2/">
           {/* <Route path="/photos/:photoId"> */}
