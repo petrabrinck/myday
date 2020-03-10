@@ -4,6 +4,7 @@ import { MyDay } from './components/MyDay'
 import { Header } from './components/Header'
 import { MyDay2 } from './components/MyDay2'
 import { MyDayForm } from './components/MyDayForm'
+import { NewDay } from './components/NewDay'
 
 // import './App.css';
 
@@ -42,6 +43,7 @@ export const App = () => {
       <Switch>
         <Route path="/" exact> 
           <Header />
+          <NewDay />
           <MyDay />
         </Route>
         <Route path="/photos/:myday2/">
