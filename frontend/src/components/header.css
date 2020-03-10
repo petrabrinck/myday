@@ -1,5 +1,15 @@
 .headerSection {
   margin: 0;
+  width: 100%;
+  height: 200px;
   background-color: #e5faf5;
   align-content: center;
+}
+
+.headerInfo h1{
+  margin: 0;
+  text-align: center;
+  color: #80f8e6;
+  font-family: 'Rock Salt', cursive;
+  font-size: 74px;
 }
