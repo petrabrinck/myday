@@ -4,7 +4,7 @@ import { MyDay } from './components/MyDay'
 import { Header } from './components/Header'
 import { MyDay2 } from './components/MyDay2'
 import { MyDayForm } from './components/MyDayForm'
-import { NewDay } from './components/NewDay'
+import { NewDayButton } from './components/NewDayButton'
 
 // import './App.css';
 
@@ -43,19 +43,39 @@ console.log(reflections)
       <Switch>
         <Route path="/" exact> 
           <Header />
-          <NewDay />
-          <MyDay data={reflections}/>
+            {/* <Route path="/NewDayButton/:myday2/"> */}
+              <NewDayButton /> 
+            {/* </Route>  */} 
+          <MyDay data={reflections} /> 
         </Route>
+        {/* <NewDayButton /> */}
         <Route path="/photos/:myday2/">
           {/* <Route path="/photos/:photoId"> */}
-          <MyDay2 onFormSubmit={handleFormSubmit} />
+          <MyDay2 />
           <MyDayForm />
         </Route>
       </Switch>
     </BrowserRouter>
-  )
+  )//Du är bäst!!
 }
 
 
 
-export default App;
+// export default App;
+// return (
+//   <BrowserRouter>
+//     <Switch>
+//       <Route path="/" exact> 
+//         <Header />
+//         <NewDay />
+//         <MyDay data={reflections}/>
+//       </Route>
+//       <Route path="/photos/:myday2/">
+//         {/* <Route path="/photos/:photoId"> */}
+//         <MyDay2 onFormSubmit={handleFormSubmit} />
+//         <MyDayForm />
+//       </Route>
+//     </Switch>
+//   </BrowserRouter>
+// )//Du är bäst!!
+// }
