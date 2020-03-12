@@ -67,6 +67,18 @@ app.post('/', async (req, res) => {
   }
 })
 
+// GET FOR SPECIFIC GUEST ID
+app.get('/reflections/:id', async (req, res) => {
+  const reflection = await Reflection.findById(req.params.id)
+  if (reflection) {
+    res.json(reflection)
+  } else {
+    res.status(404).json({ error: 'Reflection not found' })
+  }
+})
+
+// console.log(reflections)
+
 // app.post('/reflection', async (req, res) => {
 //     const reflection = new Reflection({ message }) // removed checkbox allt här som ska sparas
 //     const savedReflection = await reflection.save()

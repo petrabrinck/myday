@@ -5,7 +5,7 @@ import { Header } from './components/Header'
 import { MyDay2 } from './components/MyDay2'
 import { MyDayForm } from './components/MyDayForm'
 import { NewDayButton } from './components/NewDayButton'
-import { ReflectionDetails } from './components/ReflectionDetails'
+import { MyDayDetails } from './components/MyDayDetails'
 
 
 // import './App.css';
@@ -55,7 +55,7 @@ console.log(reflections)
           <MyDayForm />
         </Route>
         <Route path="/reflections/:reflectionId/">
-          <ReflectionDetails />
+          <MyDayDetails />
         </Route>
       </Switch>
     </BrowserRouter>

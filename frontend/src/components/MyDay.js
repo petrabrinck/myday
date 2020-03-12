@@ -14,7 +14,7 @@ export const MyDay = ({data}) => {
       .then(res => res.json())
       .then(json => {
         setPhotos(json.photos)
-        console.log(json)
+        // console.log(json)
       })
   }, [])
 
@@ -28,21 +28,14 @@ export const MyDay = ({data}) => {
     })
   })
   console.log(combo)
-
-  // const Summary
-  // const photos = [photos]
-  // const data = [data]
-
-  // const summary = [].concat({photos}, {data})
-
-
+  // console.log(data)
+  // console.log(photos)
 
   // function goBack() {
   //     window.history.back();
   //   }
   
-  console.log(data)
-  console.log(photos)
+  
  
 
   return (
