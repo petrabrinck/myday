@@ -4,14 +4,14 @@ import './newdaybutton.css'
 
 export const NewDayButton =() => {
 
-  function sayHello() {
-    alert('Hello!');
-  }
   return (  
     <div className="ButtonDiv">
-      <button className="NewDayButton" onClick={sayHello}>
+      <Link to={`/newReflection/`}>
+        <button className="NewDayButton">
+
         New Day :-)
       </button>
+      </Link>
     </div>
   )
 }

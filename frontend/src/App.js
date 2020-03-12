@@ -5,6 +5,8 @@ import { Header } from './components/Header'
 import { MyDay2 } from './components/MyDay2'
 import { MyDayForm } from './components/MyDayForm'
 import { NewDayButton } from './components/NewDayButton'
+import { ReflectionDetails } from './components/ReflectionDetails'
+
 
 // import './App.css';
 
@@ -48,11 +50,12 @@ console.log(reflections)
             {/* </Route>  */} 
           <MyDay data={reflections} /> 
         </Route>
-        {/* <NewDayButton /> */}
-        <Route path="/photos/:myday2/">
-          {/* <Route path="/photos/:photoId"> */}
+        <Route path="/newReflection/">
           <MyDay2 />
           <MyDayForm />
+        </Route>
+        <Route path="/reflections/:reflectionId/">
+          <ReflectionDetails />
         </Route>
       </Switch>
     </BrowserRouter>
