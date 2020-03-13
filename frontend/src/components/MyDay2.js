@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import './myday2.css'
 import { MyDayForm } from './MyDayForm'
 
-const questionsGroup = ['I feel happy today', 'I feel strong']
-const questionsGroup2 = ['I took a walk', 'I went to the gym']
-const questionsGroup3 = ['I took a walk', 'I went to the gym']
-const questionsGroup4 = ['I took a walk', 'I went to the gym']
+// const questionsGroup = ['I feel happy today', 'I feel strong']
+// const questionsGroup2 = ['I took a walk', 'I went to the gym']
+// const questionsGroup3 = ['I took a walk', 'I went to the gym']
+// const questionsGroup4 = ['I took a walk', 'I went to the gym']
 
 // export const MayDay2 = () => {
 //     //   const [name, setName] = useState("")
@@ -37,7 +37,7 @@ export const MyDay2 = () => {
             value={name}
           />
         </div> */}
-      <section className="boxes">
+      {/* <section className="boxes">
         <div className="questions1">
           {questionsGroup.map(group => (
             <label key={group}>
@@ -91,7 +91,7 @@ export const MyDay2 = () => {
             </label>
             ))}
         </div>
-      </section>
+      </section> */}
         <div className="formDiv">
           <MyDayForm />
         </div>

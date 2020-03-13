@@ -11,12 +11,13 @@ const url = "https://api.pexels.com/v1/search?query=example+paradise/"
 export const MyDayDetails = () => {
     const { reflectionId } = useParams()
     const [ reflection, setReflection ] = useState ([])
+    console.log(reflectionId)
 
     useEffect(() => {
       // fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US`)
         // fetch(`https://api.pexels.com/v1/paradise/${reflectionId}?api_key=563492ad6f917000010000016674d16c530e444482c459f1837b2a47`)
         // fetch(url, { headers: {Reflection_id: reflectionId}, { Authorization: apiKey}})
-        fetch(url, { headers: { Authorization: apiKey}})
+        fetch(`http://localhost:9000/reflections/${reflectionId}`)
         .then((res) => res.json())
         .then((json) => {
             setReflection(json)
@@ -39,6 +40,7 @@ export const MyDayDetails = () => {
             </Link>
             <div>
                 <p>so today you</p>
+                <p>{reflection.message}</p> 
             </div>
             {/* backDrop background picture with CSS style in react for the site
             < div className="backDrop" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}} alt={movie.original_title} /> */}
@@ -48,7 +50,7 @@ export const MyDayDetails = () => {
                 <img className="infoPoster" src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt={movie.original_title} /> 
                 {/*titleInfo contains title and rating to make them flex in css*/} 
                 {/* <div className="titleInfo">   
-                    <h1 className="movieTitle">{movie.original_title}
+                    <h1 className="movieTitle">{reflection.message}
                         <p className="movieVotes">{movie.vote_average}/10</p>
                     </h1>
                     <p>{movie.overview}</p>

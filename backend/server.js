@@ -8,14 +8,14 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
 const Reflection = mongoose.model('Reflection', {
-  message: {
+  messagePeople: {
     type: String,
-    required: true,
+    // required: true,
     minlength: 5,
     maxlength: 140
   },
 
-  // checkbox: { 
+  // feeling: { 
   //   type: String,
   //   // required: true,
   //   enum: ['Happy', 'Worried', 'Strong', 'Sad'],
@@ -56,7 +56,7 @@ app.post('/', async (req, res) => {
   const {message} = req.body
 
   //Use our mongoose model to create the database entry
-  const reflection = new Reflection({message})
+  const reflection = new Reflection(req.body)
 
   try {
     //Success
