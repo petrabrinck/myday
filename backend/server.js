@@ -8,26 +8,33 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
 const Reflection = mongoose.model('Reflection', {
+  feeling: { 
+    type: String,
+  },
   messagePeople: {
     type: String,
     // required: true,
     minlength: 5,
     maxlength: 140
   },
-
-  // feeling: { 
-  //   type: String,
-  //   // required: true,
-  //   enum: ['Happy', 'Worried', 'Strong', 'Sad'],
-  //   placeholder: 'Text',
-  //   forceField: 'checkbox'
-  
-// })
-
-  // hearts: {
-  //   type: Number,
-  //   default: 0
-  // },
+  messageGrateful: {
+    type: String,
+    // required: true,
+    minlength: 5,
+    maxlength: 140
+  },
+  messageLookForward: {
+    type: String,
+    // required: true,
+    minlength: 5,
+    maxlength: 140
+  },
+  messageReflections: {
+    type: String,
+    // required: true,
+    minlength: 5,
+    maxlength: 140
+  },
   createdAt: {
     type: Date,
     default: Date.now

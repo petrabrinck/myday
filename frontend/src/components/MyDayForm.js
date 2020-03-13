@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import "./mydayform.css"
 
-const questionsGroup = ['I feel happy today', 'I feel strong']
+const feeling = ['I feel happy today', 'I feel strong']
 const questionsGroup2 = ['I took a walk', 'I went to the gym']
-const questionsGroup3 = ['I took a walk', 'I went to the gym']
-const questionsGroup4 = ['I took a walk', 'I went to the gym']
+const questionsGroup3 = ['I feel worried', 'I feel tired']
+const questionsGroup4 = ['I got a compliment', 'I gave someone a hug']
 
 
 export const MyDayForm = props => {
@@ -18,7 +18,9 @@ export const MyDayForm = props => {
   const [questions4, setQuestions4] = useState()
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState([])
-
+  const [submitted, setSubmitted] = useState(false)
+  
+  // const [feeling, setFeeling] = useState("")
   const [message, setMessage] = useState("")
   const handleSubmit = event => {
     event.preventDefault()
@@ -26,23 +28,27 @@ export const MyDayForm = props => {
     setMessage("")
   }
 console.log("fredag den 13")
+
     return ( 
       <section className='formSection'>
-         <Link className="backLink" to={`/`}>
+       
+       <Link className="backLink" to={`/`}>
           <svg className="backLinkImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
             <path d="M27 14.5C27 7.596441 21.4035594 2 14.5 2S2 7.596441 2 14.5 7.5964406 27 14.5 27 27 21.403559 27 14.5zm-19.3388348-.353553l7.4852814-7.485282c.1952622-.195262.5118446-.195262.7071068 0l2.1213203 2.121321c.1952622.195262.1952622.511844 0 .707106L12.9644661 14.5l5.0104076 5.010408c.1952622.195262.1952622.511844 0 .707106l-2.1213203 2.121321c-.1952622.195262-.5118446.195262-.7071068 0l-7.4852814-7.485282c-.19799-.19799-.197989-.509117 0-.707106z" fill="#fff" fillRule="evenodd"></path></svg>
             <p>Go back</p>
         </Link>
         <div className="header2">
         <h1>Time to reflect</h1>
-      </div> 
-
-    <form className='form'>
+        </div> 
+     
+      {!submitted && (
+        <form className='form' className='form'onSubmit={event => event.preventDefault()}>
+    {/* <form className='form' */}
      
 
     <section className="boxes">
         <div className="questions1">
-          {questionsGroup.map(group => (
+          {questionsGroup2.map(group => (
             <label key={group}>
               <input className="questions1"
                 type="checkbox"
@@ -54,6 +60,7 @@ console.log("fredag den 13")
             </label>
           ))}
         </div>
+
 
         <div className="questions2">
           {questionsGroup2.map(group => (
@@ -82,7 +89,7 @@ console.log("fredag den 13")
           ))}
         </div>
         <div className="questions4">
-          {questionsGroup2.map(group => (
+          {questionsGroup4.map(group => (
             <label key={group}>
               <input className="questions4"
                 type="checkbox"
@@ -101,31 +108,31 @@ console.log("fredag den 13")
         onChange={event => setMessage(event.target.value)}
       ></textarea>
       <div className='form-footer'>
-      <p>{message.length} / 140</p>
-        <button 
+      <p>{feeling.length} / 140</p>
+        {/* <button 
           className='form-button'
           type='submit'
           onClick={handleSubmit}
-          disabled={message.length < 6 || message.length > 140 ? true : false}
+          disabled={feeling.length < 6 || feeling.length > 140 ? true : false}
         >
           <p>Save</p>
-        </button>
-      </div>
+        </button> */}
+      </div> 
       <h4>Two things I'm grateful for</h4>
       <textarea
         rows='3'
         onChange={event => setMessage(event.target.value)}
       ></textarea>
       <div className='form-footer'>
-      <p>{message.length} / 140</p>
-        <button 
+      <p>{feeling.length} / 140</p>
+        {/* <button 
           className='form-button'
           type='submit'
           onClick={handleSubmit}
           disabled={message.length < 6 || message.length > 140 ? true : false}
         >
           <p>Save</p>
-        </button>
+        </button> */}
       </div>
       <h4>Two things I look forward to</h4>
       <textarea
@@ -134,33 +141,45 @@ console.log("fredag den 13")
       ></textarea>
       <div className='form-footer'>
       <p>{message.length} / 140</p>
-        <button 
+        {/* <button 
           className='form-button'
           type='submit'
           onClick={handleSubmit}
           disabled={message.length < 6 || message.length > 140 ? true : false}
         >
           <p>Save</p>
-        </button>
-      </div>
-      <h4>Today I felt that</h4>
+        </button> */}
+      </div> 
+
+      {/* console.log(feeling) */}
+      <h4>Reflections</h4>
       <textarea
         rows='3'
         onChange={event => setMessage(event.target.value)}
       ></textarea>
       <div className='form-footer'>
       <p>{message.length} / 140</p>
-        <button 
+       
+        
+      </div>
+      {/* <button 
           className='form-button'
           type='submit'
           onClick={handleSubmit}
           disabled={message.length < 6 || message.length > 140 ? true : false}
         >
             <p>Save</p>
-        </button>
+        </button> */}
+        <button className="submitBtn"
+            onClick={() => setSubmitted(true)}
+          >SUBMIT
+            </button>
         
-      </div>
+      
+
     </form>
-    </section>
+    )}
+      {submitted && <Summary name={name} adventures={adventures} destinations={destinations} mostImportant={mostImportant} companionGroup={companionGroup} />}
+   </section>
   )
 }
