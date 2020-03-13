@@ -1,23 +1,64 @@
 .myDay2Container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/drop.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+/* height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+-webkit-font-smoothing: antialiased;
+ background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("/assets/surf.jpg");
+ /* background-repeat: no-repeat;  */
+ /* background-size: cover;
+ color: whitesmoke;
+ padding: 10px */ 
+
+.header2 {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
-.Questions1 {
+.boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 150px;
+  /* width: 900px; */
+  /* margin: 90px; */
+}
+
+.boxes label {
+  padding: 30px;
+  display: flex;
+  color: white;
+}
+
+.questions1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  
 }
 
 input.questions1 { 
-  margin-right: 20px;
+  margin-right: 40px;
   margin-bottom: 10px;
 }
 
-.Questions2 {
+.questions2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,13 +69,35 @@ input.questions2 {
   margin-right: 20px;
   margin-bottom: 10px;
 }
+.questions3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+input.questions3 { 
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.questions4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+input.questions4 { 
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
 
 /* ******Back link css ********* */
 
 .myDay2Container .backLink {
   position: absolute;
   display: inline-flex;
-  color: black;
+  color: white;
   align-items: center;
   font-weight: 700;
   text-decoration: none;
@@ -52,5 +115,5 @@ input.questions2 {
 
 /*makes the button move to the side when hover*/
 .myDay2Container .backLink svg {
-  transition: margin-right .3s ease-in-out;  
-}
+  transition: margin-right .3s ease-in-out;   
+} 

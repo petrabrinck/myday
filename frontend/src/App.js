@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MyDay } from './components/MyDay'
 import { Header } from './components/Header'
 import { MyDay2 } from './components/MyDay2'
-import { MyDayForm } from './components/MyDayForm'
+// import { MyDayForm } from './components/MyDayForm'
 import { NewDayButton } from './components/NewDayButton'
 import { MyDayDetails } from './components/MyDayDetails'
 
@@ -52,7 +52,7 @@ console.log(reflections)
         </Route>
         <Route path="/newReflection/">
           <MyDay2 />
-          <MyDayForm />
+          {/* <MyDayForm /> */}
         </Route>
         <Route path="/reflections/:reflectionId/">
           <MyDayDetails />

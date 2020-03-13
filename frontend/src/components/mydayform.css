@@ -6,7 +6,7 @@
 }
 
 .form {
-  background-color: #e5faf5;;
+  background-color: #e5faf5;
   border: 1px solid darkslategrey;
   border-radius: 7px;
   width: 300px;
@@ -17,7 +17,7 @@
   padding: 20px;
 }
   
-.hform textarea {
+.form textarea {
   width: 100%;
   resize: none;
   padding: 10px;
@@ -28,6 +28,7 @@
   
 .form h4 {
   margin: 0;
+  color: darkslategrey;
 }
 
 .form p {
