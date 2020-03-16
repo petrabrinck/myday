@@ -19,6 +19,7 @@ export const App = () => {
   const [reflections, setReflections] = useState([])
   const [checkboxes, setCheckboxes] = useState([])
   const [postedReflection, setPostedReflection] = useState("")
+  const feeling = ['I feel happy today', 'I feel strong', 'I took a walk', 'I went to the gym', 'I got a compliment', 'I gave someone a hug', 'I feel worried', 'I feel tired']
 
   useEffect(() => {
     fetch(url)
@@ -52,10 +53,10 @@ console.log(reflections)
         </Route>
         <Route path="/newReflection/">
           {/* <MyDay2 /> */}
-          <MyDayForm />
+          <MyDayForm feelings={feeling} />
         </Route>
         <Route path="/reflections/:reflectionId/">
-          <MyDayDetails />
+          <MyDayDetails feelings={feeling}/>
         </Route>
       </Switch>
     </BrowserRouter>

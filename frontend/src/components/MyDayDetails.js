@@ -8,11 +8,13 @@ import './mydaydetails.css'
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
 const url = "https://api.pexels.com/v1/search?query=example+paradise/"
 
-export const MyDayDetails = () => {
+export const MyDayDetails = (props) => {
+    const feelings = props.feelings
     const { reflectionId } = useParams()
     const [ reflection, setReflection ] = useState ([])
+    const [ feelingsChecked, setFeelingsChecked] = useState ([])
     console.log(reflectionId)
-
+    
     useEffect(() => {
       // fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US`)
         // fetch(`https://api.pexels.com/v1/paradise/${reflectionId}?api_key=563492ad6f917000010000016674d16c530e444482c459f1837b2a47`)
@@ -21,6 +23,7 @@ export const MyDayDetails = () => {
         .then((res) => res.json())
         .then((json) => {
             setReflection(json)
+            setFeelingsChecked([json.feeling1, json.feeling2])
             console.log(json)
         })  
     }, [reflectionId])
@@ -39,12 +42,18 @@ export const MyDayDetails = () => {
                 <p>Back</p>
             </Link>
             <div>
+                {feelings.map((feeling, index) =>  {
+                  if (!feelingsChecked[index])return null
+                  return(
+                    <p> {feeling} </p>
+                  )
+                })}
                 <p>so today you</p>
-                <p>{reflection.feeling}</p> 
+                
                 <p>{reflection.messagePeople}</p> 
                 <p>{reflection.messageGrateful}</p> 
-                <p>{reflection.messageLookForward}</p> 
-                <p>{reflection.messageReflections}</p> 
+                {/* <p>{reflection.messageLookForward}</p> 
+                <p>{reflection.messageReflections}</p>   */}
             </div>
             {/* backDrop background picture with CSS style in react for the site
             < div className="backDrop" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}} alt={movie.original_title} /> */}

@@ -8,31 +8,34 @@ mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
 const Reflection = mongoose.model('Reflection', {
-  feeling: { 
+  feeling1: { 
+    type: String,
+  },
+  feeling2: { 
     type: String,
   },
   messagePeople: {
     type: String,
     // required: true,
-    minlength: 5,
+    minlength: 1,
     maxlength: 140
   },
   messageGrateful: {
     type: String,
     // required: true,
-    minlength: 5,
+    minlength: 1,
     maxlength: 140
   },
   messageLookForward: {
     type: String,
     // required: true,
-    minlength: 5,
+    minlength: 1,
     maxlength: 140
   },
   messageReflections: {
     type: String,
     // required: true,
-    minlength: 5,
+    minlength: 1,
     maxlength: 140
   },
   createdAt: {
@@ -61,6 +64,7 @@ app.get('/', async (req, res) => {
 app.post('/', async (req, res) => {
   //Retrieve the information sent by the client to our API endpoint
   const {message} = req.body
+  console.log(req.body)
 
   //Use our mongoose model to create the database entry
   const reflection = new Reflection(req.body)
