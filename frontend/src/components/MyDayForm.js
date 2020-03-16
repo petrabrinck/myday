@@ -32,8 +32,17 @@ export const MyDayForm = props => {
       body: JSON.stringify({
         feeling1: feelingsChecked[0],
         feeling2: feelingsChecked[1],
-        messagePeople:questions1,
-        messageGrateful: questions2
+        feeling3: feelingsChecked[2],
+        feeling4: feelingsChecked[3],
+        feeling5: feelingsChecked[4],
+        feeling6: feelingsChecked[5],
+        feeling7: feelingsChecked[6],
+        feeling8: feelingsChecked[7],
+
+        messagePeople: questions1,
+        messageGrateful: questions2,
+        messageLookForward: questions3,
+        messageReflections: questions4
       }),
       headers: { "Content-Type": "application/json" }
     })
@@ -55,10 +64,7 @@ console.log("fredag den 13")
       </Link>
       <div className="header2">
         <h1>Time to reflect</h1>
-      </div> 
-    
-      {/* {!submitted && ( */}
-
+      </div>
         <form className='form' onSubmit={event => event.preventDefault()}>
         <section className="boxes">
           <div className="questions1">
@@ -74,45 +80,7 @@ console.log("fredag den 13")
               </label>
             ))}
           </div>
-          {/* <div className="questions2">
-            {feeling.map(group => (
-              <label key={group}>
-                <input className="questions2"
-                  type="checkbox"
-                  value={group}
-                  onChange={event => setQuestions2(event.target.value)}
-                  checked={questions2 === group}
-                />
-                {group}
-              </label>
-            ))}
-          </div>
-          <div className="questions3">
-            {questionsGroup3.map(group => (
-              <label key={group}>
-                <input className="questions3"
-                  type="checkbox"
-                  value={group}
-                  onChange={event => setQuestions3(event.target.value)}
-                  checked={questions3 === group}
-                />
-                {group}
-              </label>
-            ))}
-          </div>
-          <div className="questions4">
-            {questionsGroup4.map(group => (
-              <label key={group}>
-                <input className="questions4"
-                  type="checkbox"
-                  value={group}
-                  onChange={event => setQuestions4(event.target.value)}
-                  checked={questions4 === group}
-                />
-                {group}
-              </label>
-            ))}
-          </div> */}
+         
         </section>
           <section className="formInputSection">
           <h4>Two people who I admire</h4>
@@ -122,14 +90,6 @@ console.log("fredag den 13")
           ></textarea>
           <div className='form-footer'>
             <p>{feeling.length} / 140</p>
-              {/* <button 
-                className='form-button'
-                type='submit'
-                onClick={handleSubmit}
-                disabled={feeling.length < 6 || feeling.length > 140 ? true : false}
-              >
-                <p>Save</p>
-              </button> */}
           </div> 
           
           <h4>Two things I'm grateful for</h4>
@@ -139,59 +99,33 @@ console.log("fredag den 13")
           ></textarea>
           <div className='form-footer'>
             <p>{message.length} / 140</p>
-              {/* <button 
-                className='form-button'
-                type='submit'
-                onClick={handleSubmit}
-                disabled={message.length < 6 || message.length > 140 ? true : false}
-              >
-                <p>Save</p>
-              </button> */}
           </div>
 
           <h4>Two things I look forward to</h4>
           <textarea
             rows='3'
-            onChange={event => setMessage(event.target.value)}
+            onChange={event => setQuestions3(event.target.value)}
           ></textarea>
           <div className='form-footer'>
             <p>{message.length} / 140</p>
-              {/* <button 
-                className='form-button'
-                type='submit'
-                onClick={handleSubmit}
-                disabled={message.length < 6 || message.length > 140 ? true : false}
-              >
-                <p>Save</p>
-              </button> */}
           </div> 
 
-            {/* console.log(feeling) */}
           <h4>Reflections</h4>
           <textarea
             rows='3'
-            onChange={event => setMessage(event.target.value)}
+            onChange={event => setQuestions4(event.target.value)}
           ></textarea>
           <div className='form-footer'>
             <p>{message.length} / 140</p>
           </div>
         </section>
-        {/* <button 
-            className='form-button'
-            type='submit'
-            onClick={handleSubmit}
-            disabled={message.length < 6 || message.length > 140 ? true : false}
-          >
-              <p>Save</p>
-          </button> */}
+      
         <button className="submitBtn"
           onClick={(event) => handleSubmit(event)}
           >SUBMIT
         </button>
       </form>
     )}
-    {/* {submitted && <Reflection feeling={feeling} questions1={questions1} />} */}
-    {/* {submitted && <Summary name={name} adventures={adventures} destinations={destinations} mostImportant={mostImportant} companionGroup={companionGroup} />} */}
     </section>
   )
 }

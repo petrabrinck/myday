@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './myday.css'
 import { Link } from 'react-router-dom'
-
+// const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=25&page=1"
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
-const url = "https://api.pexels.com/v1/search?query=example+paradise"
+const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=25&page=5"
 
 export const MyDay = ({data}) => {
   const [photos, setPhotos] = useState([])
@@ -14,7 +14,7 @@ export const MyDay = ({data}) => {
       .then(res => res.json())
       .then(json => {
         setPhotos(json.photos)
-        // console.log(json)
+        console.log(json)
       })
   }, [])
 

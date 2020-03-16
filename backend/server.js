@@ -14,27 +14,41 @@ const Reflection = mongoose.model('Reflection', {
   feeling2: { 
     type: String,
   },
+  feeling3: { 
+    type: String,
+  },
+  feeling4: { 
+    type: String,
+  },
+  feeling5: { 
+    type: String,
+  },
+  feeling6: { 
+    type: String,
+  },
+  feeling7: { 
+    type: String,
+  },
+  feeling8: { 
+    type: String,
+  },
   messagePeople: {
     type: String,
-    // required: true,
     minlength: 1,
     maxlength: 140
   },
   messageGrateful: {
     type: String,
-    // required: true,
     minlength: 1,
     maxlength: 140
   },
   messageLookForward: {
     type: String,
-    // required: true,
     minlength: 1,
     maxlength: 140
   },
   messageReflections: {
     type: String,
-    // required: true,
     minlength: 1,
     maxlength: 140
   },

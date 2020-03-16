@@ -6,7 +6,7 @@ import './mydaydetails.css'
 // const id = "{${reflection._id}}"
 // const url = "https://api.pexels.com/search?q=${reflection._id}"
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
-const url = "https://api.pexels.com/v1/search?query=example+paradise/"
+const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=25&page=2"
 
 export const MyDayDetails = (props) => {
     const feelings = props.feelings
@@ -23,7 +23,9 @@ export const MyDayDetails = (props) => {
         .then((res) => res.json())
         .then((json) => {
             setReflection(json)
+            // setFeelingsChecked([json.feelings])
             setFeelingsChecked([json.feeling1, json.feeling2])
+            // setFeelingsChecked([json.feeling1, json.feeling2, json.feeling3, json.feeling4, json.feeling5, json.feeling6, json.feeling7, json.feeling8])
             console.log(json)
         })  
     }, [reflectionId])
@@ -42,16 +44,20 @@ export const MyDayDetails = (props) => {
                 <p>Back</p>
             </Link>
             <div>
+            <p>so today you</p>
+
                 {feelings.map((feeling, index) =>  {
                   if (!feelingsChecked[index])return null
                   return(
                     <p> {feeling} </p>
                   )
                 })}
-                <p>so today you</p>
+                
                 
                 <p>{reflection.messagePeople}</p> 
                 <p>{reflection.messageGrateful}</p> 
+                <p>{reflection.messageLookForward}</p> 
+                <p>{reflection.messageReflections}</p> 
                 {/* <p>{reflection.messageLookForward}</p> 
                 <p>{reflection.messageReflections}</p>   */}
             </div>
