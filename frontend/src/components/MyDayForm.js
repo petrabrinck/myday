@@ -69,7 +69,7 @@ console.log("fredag den 13")
         <section className="boxes">
           <div className="questions1">
             {feeling.map((item, index) => (
-              <label key={item}>
+              <label className="checkboxLabel" key={item}>
                 <input className="questions1"
                   type="checkbox"
                   value={item}
@@ -89,7 +89,7 @@ console.log("fredag den 13")
             onChange={event => setQuestions1(event.target.value)}
           ></textarea>
           <div className='form-footer'>
-            <p>{feeling.length} / 140</p>
+            {/* <p>{feeling.length} / 140</p> */}
           </div> 
           
           <h4>Two things I'm grateful for</h4>
@@ -98,7 +98,7 @@ console.log("fredag den 13")
             onChange={event => setQuestions2(event.target.value)}
           ></textarea>
           <div className='form-footer'>
-            <p>{message.length} / 140</p>
+            {/* <p>{message.length} / 140</p> */}
           </div>
 
           <h4>Two things I look forward to</h4>
@@ -107,7 +107,7 @@ console.log("fredag den 13")
             onChange={event => setQuestions3(event.target.value)}
           ></textarea>
           <div className='form-footer'>
-            <p>{message.length} / 140</p>
+            {/* <p>{message.length} / 140</p> */}
           </div> 
 
           <h4>Reflections</h4>
@@ -116,7 +116,7 @@ console.log("fredag den 13")
             onChange={event => setQuestions4(event.target.value)}
           ></textarea>
           <div className='form-footer'>
-            <p>{message.length} / 140</p>
+            {/* <p>{message.length} / 140</p> */}
           </div>
         </section>
       
@@ -125,7 +125,6 @@ console.log("fredag den 13")
           >SUBMIT
         </button>
       </form>
-    )}
     </section>
   )
 }

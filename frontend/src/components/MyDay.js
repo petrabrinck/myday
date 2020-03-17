@@ -18,7 +18,8 @@ export const MyDay = ({data}) => {
       })
   }, [])
 
- 
+
+
 
   let combo = []
   data.forEach((reflection, index) => {

@@ -1,23 +1,105 @@
-.formSection {
+
+/* ******Back link css ********* */
+
+.formSection .backLink {
+  position: absolute;
+  display: inline-flex;
+  color: black;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  left: 20px;
+  top: 20px;
+  color: white;
+}
+
+.backLinkImg {
+  width: 10%;
+  margin-right: 10px;
+  
+}
+.backLink:hover svg {
+  margin-right: 10px;
+} 
+ 
+/*makes the button move to the side when hover*/
+/* .formSection .backLink svg {
+  transition: margin-right .3s ease-in-out;   
+}  */
+
+.header2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: darkslategray;
+  margin-top: 60px;
 }
 
-.form {
-  background-color: #e5faf5;
-  border: 1px solid darkslategrey;
-  border-radius: 7px;
-  width: 300px;
-  margin: 16px;
+/* .formSection {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+} */
+
+.formSection {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/drop.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 100vh; 
+  /* width: 100%;
+  overflow: hidden;
+  margin: 0px; */
+  /* padding: 0px; */
+  color: whitesmoke;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  /* flex-flow: row; */
+  flex-wrap: wrap; 
+  justify-content: center;
+  /* margin-top: 0px;
+  width: 500px; */
+  /* margin: 90px;     */
+}
+
+.checkboxLabel {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+} 
+
+/* .boxes label {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  color: darkslategray;
+  flex-wrap: wrap;
+} 
+/* .form {
+  background-color: #e5faf5;
+  border: 1px solid darkslategrey;
+  border-radius: 7px; */
+  /* width: 700px; */
+  /* margin: 16px;
+  display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between;
+  padding: 20px; 
+  width: 100%;
+} */
   
-.form textarea {
+/* .form textarea {
   width: 100%;
   resize: none;
   padding: 10px;
@@ -57,20 +139,9 @@
   justify-content: space-evenly;
   width: 100%;
   margin-bottom: 10px;
-}
+} */
 
-.myDay2Container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../assets/drop.jpg");
-  background-repeat: no-repeat; 
-  background-size: cover;
-  height: 100vh;
-  -webkit-font-smoothing: antialiased;
 
-}
 
 /* height: 100vh;
 display: flex;
@@ -83,98 +154,22 @@ align-items: center;
  color: whitesmoke;
  padding: 10px */ 
 
-.header2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: darkslategray;
-}
 
-.boxes {
+
+
+
+/* .questions1 {
   display: flex;
+  flex-flow: row;
   flex-direction: row;
-  justify-content: center;
-  margin-top: 150px;
-  /* width: 900px; */
-  /* margin: 90px; */
-}
-
-.boxes label {
-  padding: 30px;
-  display: flex;
-  color: darkslategray;
-}
-
-.questions1 {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: left;
   
-}
+} */
 
-input.questions1 { 
-  margin-right: 40px;
-  margin-bottom: 10px;
-}
+/* input.questions1 { 
+  /* margin-right: 40px; 
+  margin-bottom: 3px;
+} */
 
-.questions2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-}
 
-input.questions2 { 
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-.questions3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-}
-
-input.questions3 { 
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-.questions4 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-}
-
-input.questions4 { 
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-
-/* ******Back link css ********* */
-
-.myDay2Container .backLink {
-  position: absolute;
-  display: inline-flex;
-  color: white;
-  align-items: center;
-  font-weight: 700;
-  text-decoration: none;
-  left: 50px;
-  top: 20px;
-}
-
-.backLinkImg {
-  width: 10%;
-}
-
-.backLink:hover svg {
-  margin-right: 10px;
-}
-
-/*makes the button move to the side when hover*/
-.myDay2Container .backLink svg {
-  transition: margin-right .3s ease-in-out;   
-} 
