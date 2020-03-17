@@ -2,8 +2,9 @@
 /* ******Back link css ********* */
 
 .formSection .backLink {
-  position: absolute;
-  display: inline-flex;
+  /* position: absolute; */
+  display: flex;
+  justify-content: flex-end;
   color: black;
   align-items: center;
   font-weight: 700;
@@ -11,12 +12,18 @@
   left: 20px;
   top: 20px;
   color: white;
+ 
 }
 
 .backLinkImg {
   width: 10%;
   margin-right: 10px;
-  
+}
+
+.backLink p {
+  display: inline-block;
+  margin: 0px;
+  align-items: center;
 }
 .backLink:hover svg {
   margin-right: 10px;
@@ -153,8 +160,9 @@ textarea {
 .form button:hover {
   cursor: pointer;
 }
-  
-/* height: 100vh;
+
+} 
+height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -163,8 +171,8 @@ align-items: center;
  /* background-repeat: no-repeat;  */
  /* background-size: cover;
  color: whitesmoke;
- padding: 10px */ 
-
+ padding: 10px; 
+}
 
 
 
