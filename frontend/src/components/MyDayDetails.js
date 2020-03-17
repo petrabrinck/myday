@@ -58,8 +58,6 @@ export const MyDayDetails = (props) => {
                 <p>{reflection.messageGrateful}</p> 
                 <p>{reflection.messageLookForward}</p> 
                 <p>{reflection.messageReflections}</p> 
-                {/* <p>{reflection.messageLookForward}</p> 
-                <p>{reflection.messageReflections}</p>   */}
             </div>
             {/* backDrop background picture with CSS style in react for the site
             < div className="backDrop" style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movie.backdrop_path})`}} alt={movie.original_title} /> */}

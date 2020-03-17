@@ -19,7 +19,8 @@ export const App = () => {
   const [reflections, setReflections] = useState([])
   const [checkboxes, setCheckboxes] = useState([])
   const [postedReflection, setPostedReflection] = useState("")
-  const feeling = ['I feel happy today', 'I feel strong', 'I took a walk', 'I went to the gym', 'I got a compliment', 'I gave someone a hug', 'I feel worried', 'I feel tired']
+  const feeling = ['I feel happy today', 'I feel strong', 'I took a walk', 'I went to the gym', 'I got a compliment', 'I gave someone a hug']
+  // const feeling = ['I feel happy today', 'I feel strong', 'I took a walk', 'I went to the gym', 'I got a compliment', 'I gave someone a hug', 'I feel worried', 'I feel tired']
 
   useEffect(() => {
     fetch(url)
