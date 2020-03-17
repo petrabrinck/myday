@@ -26,12 +26,12 @@ const Reflection = mongoose.model('Reflection', {
   feeling6: { 
     type: String,
   },
-  feeling7: { 
-    type: String,
-  },
-  feeling8: { 
-    type: String,
-  },
+  // feeling7: { 
+  //   type: String,
+  // },
+  // feeling8: { 
+  //   type: String,
+  // },
   messagePeople: {
     type: String,
     minlength: 1,

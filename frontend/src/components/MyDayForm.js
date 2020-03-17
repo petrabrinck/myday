@@ -36,8 +36,8 @@ export const MyDayForm = props => {
         feeling4: feelingsChecked[3],
         feeling5: feelingsChecked[4],
         feeling6: feelingsChecked[5],
-        feeling7: feelingsChecked[6],
-        feeling8: feelingsChecked[7],
+        // feeling7: feelingsChecked[6],
+        // feeling8: feelingsChecked[7],
 
         messagePeople: questions1,
         messageGrateful: questions2,
