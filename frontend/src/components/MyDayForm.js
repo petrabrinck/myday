@@ -6,7 +6,7 @@ import "./mydayform.css"
 
 const url ="http://localhost:9000"
 
-const feelingsChecked = [false, false, false, false, false, false, false, false]
+const feelingsChecked = [false, false, false, false, false, false]
 // const feeling = ['I took a walk', 'I went to the gym']
 // const feeling = ['I feel worried', 'I feel tired']
 // const feeling = ['I got a compliment', 'I gave someone a hug']
