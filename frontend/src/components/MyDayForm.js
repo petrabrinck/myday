@@ -87,38 +87,26 @@ console.log("fredag den 13")
           <textarea
             rows='3'
             onChange={event => setQuestions1(event.target.value)}
-          ></textarea>
-          <div className='form-footer'>
-            {/* <p>{feeling.length} / 140</p> */}
-          </div> 
+            ></textarea> 
           
           <h4>Two things I'm grateful for</h4>
-          <textarea
+            <textarea
             rows='3'
             onChange={event => setQuestions2(event.target.value)}
-          ></textarea>
-          <div className='form-footer'>
-            {/* <p>{message.length} / 140</p> */}
-          </div>
-
+             ></textarea>
+       
           <h4>Two things I look forward to</h4>
-          <textarea
+            <textarea
             rows='3'
             onChange={event => setQuestions3(event.target.value)}
-          ></textarea>
-          <div className='form-footer'>
-            {/* <p>{message.length} / 140</p> */}
-          </div> 
-
+            ></textarea>
+      
           <h4>Reflections</h4>
-          <textarea
+            <textarea
             rows='3'
             onChange={event => setQuestions4(event.target.value)}
-          ></textarea>
-          <div className='form-footer'>
-            {/* <p>{message.length} / 140</p> */}
-          </div>
-        </section>
+            ></textarea>
+          </section>
       
         <button className="submitBtn"
           onClick={(event) => handleSubmit(event)}

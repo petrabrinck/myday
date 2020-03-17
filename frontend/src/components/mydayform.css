@@ -70,7 +70,8 @@
   justify-content: center;
   /* margin-top: 0px;
   width: 500px; */
-  /* margin: 90px;     */
+  /* margin: 90px;*/
+  margin-bottom: 25px;
 }
 
 .checkboxLabel {
@@ -79,6 +80,26 @@
   padding-bottom: 10px;
 } 
 
+.formInputSection h4 {
+  margin: 0px;
+  color: white;
+}
+
+.formInputSection { 
+  display: inline;
+  flex-direction: row;
+  color: darkslategray;
+ 
+}
+
+textarea {
+  display: flex;
+  justify-items: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 30px;
+}
 /* .boxes label {
   padding: 10px;
   display: flex;
@@ -133,16 +154,6 @@
   cursor: pointer;
 }
   
-.form-footer {
-  display: flex;
-  align-items: left;
-  justify-content: space-evenly;
-  width: 100%;
-  margin-bottom: 10px;
-} */
-
-
-
 /* height: 100vh;
 display: flex;
 flex-direction: column;
