@@ -15,11 +15,17 @@ export const MyDay = ({data}) => {
       .then(json => {
         setPhotos(json.photos)
         console.log(json)
+        // photos.reverse()
       })
   }, [])
 
 
 
+  // const photoArray = [photos]
+  //   photoArray.reverse()
+
+  // const a = [1, 2, 3];
+  //   a.reverse(); 
 
   let combo = []
   data.forEach((reflection, index) => {

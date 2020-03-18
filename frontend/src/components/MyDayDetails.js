@@ -33,7 +33,7 @@ export const MyDayDetails = (props) => {
     if (!reflection) {
         return <div>Ups, need a moment...</div>
     }
-
+    
     return(
         <section className="reflectionContainer">
 
