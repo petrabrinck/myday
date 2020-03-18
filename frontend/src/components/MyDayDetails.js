@@ -19,7 +19,8 @@ export const MyDayDetails = (props) => {
       // fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=3812b9925d12c2723ac148f3607b8bb5&language=en-US`)
         // fetch(`https://api.pexels.com/v1/paradise/${reflectionId}?api_key=563492ad6f917000010000016674d16c530e444482c459f1837b2a47`)
         // fetch(url, { headers: {Reflection_id: reflectionId}, { Authorization: apiKey}})
-        fetch(`http://localhost:9000/reflections/${reflectionId}`)
+        // fetch(`http://localhost:9000/reflections/${reflectionId}`)
+        fetch(`https://myday-reflection.herokuapp.com/reflections/${reflectionId}`)
         .then((res) => res.json())
         .then((json) => {
             setReflection(json)
@@ -33,7 +34,7 @@ export const MyDayDetails = (props) => {
     if (!reflection) {
         return <div>Ups, need a moment...</div>
     }
-    
+
     return(
         <section className="reflectionContainer">
 
