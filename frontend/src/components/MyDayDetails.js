@@ -20,7 +20,7 @@ export const MyDayDetails = (props) => {
         // fetch(`https://api.pexels.com/v1/paradise/${reflectionId}?api_key=563492ad6f917000010000016674d16c530e444482c459f1837b2a47`)
         // fetch(url, { headers: {Reflection_id: reflectionId}, { Authorization: apiKey}})
         // fetch(`http://localhost:9000/reflections/${reflectionId}`)
-        fetch(`https://myday-reflection.herokuapp.com/reflections/${reflectionId}`)
+        fetch(`https://myday.herokuapp.com/reflections/${reflectionId}`)
         .then((res) => res.json())
         .then((json) => {
             setReflection(json)
