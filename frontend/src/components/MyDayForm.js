@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import "./mydayform.css"
 
 // const url ="http://localhost:9000"
-const url ="https://myday.herokuapp.com/"
+const url ="https://myday-reflection.herokuapp.com/"
 
 const feelingsChecked = [false, false, false, false, false, false]
 // const feeling = ['I took a walk', 'I went to the gym']
