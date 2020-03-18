@@ -9,8 +9,8 @@ import { MyDayDetails } from './components/MyDayDetails'
 
 
 // const url = "https://project-happy-thoughts-api.herokuapp.com/"
-const url = "https://myday-reflection.herokuapp.com/"
-// const url = "http://localhost:9000/"
+// const url = "https://myday-reflection.herokuapp.com/"
+const url = "http://localhost:9000/"
 
 
 //If time ask Jennie about down below sign

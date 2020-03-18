@@ -3,7 +3,7 @@ import './myday.css'
 import { Link } from 'react-router-dom'
 // const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=25&page=1"
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
-const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=25&page=5"
+const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=55&page=3"
 
 export const MyDay = ({data}) => {
   const [photos, setPhotos] = useState([])

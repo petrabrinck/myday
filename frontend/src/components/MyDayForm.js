@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import "./mydayform.css"
 
-// const url ="http://localhost:9000"
-const url ="https://myday-reflection.herokuapp.com/"
+const url ="http://localhost:9000"
+// const url ="https://myday-reflection.herokuapp.com/"
 
 const feelingsChecked = [false, false, false, false, false, false]
 // const feeling = ['I took a walk', 'I went to the gym']
@@ -55,6 +55,11 @@ export const MyDayForm = props => {
     setMessage("")
     })}  
 console.log("fredag den 13")
+
+
+  // function goBack() {
+  //     window.history.back();
+  // }
 
   return ( 
     <section className='formSection'>
