@@ -47,36 +47,44 @@ export const MyDayDetails = props => {
                     <path d="M27 14.5C27 7.596441 21.4035594 2 14.5 2S2 7.596441 2 14.5 7.5964406 27 14.5 27 27 21.403559 27 14.5zm-19.3388348-.353553l7.4852814-7.485282c.1952622-.195262.5118446-.195262.7071068 0l2.1213203 2.121321c.1952622.195262.1952622.511844 0 .707106L12.9644661 14.5l5.0104076 5.010408c.1952622.195262.1952622.511844 0 .707106l-2.1213203 2.121321c-.1952622.195262-.5118446.195262-.7071068 0l-7.4852814-7.485282c-.19799-.19799-.197989-.509117 0-.707106z" fill="#000" fillRule="evenodd"></path></svg>
                 <p>Back</p>
             </Link> */}
-        <div>
+        <div className="reflectionSummary">
           <h2>Great to see you again!</h2>
-          <h2>Your saved reflections,</h2>
+          <h3>Memories from this day</h3> 
+          
           {feelings.map((item, index) => {
             if (savedFeelings[index] === 'true') {
               return <h3 key={index}>{item}</h3>
             }
           })}
-        </div>
+        {/* </div> */}
 
         <div className='Summary'>
           {/* <h4>Here are today's reflections.</h4> */}
-          <p>You admire these two persons {reflection.messagePeople}</p>
-          <p>Two things I'm grateful for: {reflection.messageGrateful}</p>
-          <p>My reflections{reflection.messageReflections}!</p>
+          <span> 🦋 </span>
+          <h3>I admire: {reflection.messagePeople}</h3>
+          <h3>I'm grateful for: {reflection.messageGrateful}</h3>
+          <h3>My reflections: {reflection.messageReflections}!</h3>
           {/* <p>My reflections: {reflection.messageLookForward}.</p> */}
         </div>
-
+        </div>
+        {/* <Link className='backLink' to={`/`}>
+        <button className="submitBtn"
+          onClick={(event) => handleSubmit(event)}
+          >Go back
+        </button>
+        </Link> */}
         <Link className='backLink' to={`/`}>
-          <svg
+          {/* <svg
             className='backLinkImg'
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 30 30'
-          >
-            <path
+          > */}
+            {/* <path
               d='M27 14.5C27 7.596441 21.4035594 2 14.5 2S2 7.596441 2 14.5 7.5964406 27 14.5 27 27 21.403559 27 14.5zm-19.3388348-.353553l7.4852814-7.485282c.1952622-.195262.5118446-.195262.7071068 0l2.1213203 2.121321c.1952622.195262.1952622.511844 0 .707106L12.9644661 14.5l5.0104076 5.010408c.1952622.195262.1952622.511844 0 .707106l-2.1213203 2.121321c-.1952622.195262-.5118446.195262-.7071068 0l-7.4852814-7.485282c-.19799-.19799-.197989-.509117 0-.707106z'
               fill='#fff'
               fillRule='evenodd'
-            ></path>
-          </svg>
+            ></path> */}
+          {/* </svg> */}
           <p>Go back</p>
         </Link>
       </section>

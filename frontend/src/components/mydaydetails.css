@@ -7,7 +7,9 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/forest.jpeg");
+  /* background-image: url("../assets/forest.jpeg"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url("../assets/forest.jpeg");
   background-repeat: no-repeat; 
   background-size: cover;
   height: 100vh; 
@@ -22,11 +24,62 @@ body {
 
 .detailsContainer h2 {
   font-family: 'Rock Salt', cursive;
+  color: rgb(244, 163, 132);
 } 
 
-.detailsContainer .backLink {
-  /* position: absolute; */
+span {
   display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.detailsContainer h3 {
+  font-family: 'Poppins' sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.reflectionSummary {
+  /* border: solid 2px white;
+  border-radius: 8%; */
+  padding: 15px;
+  margin-bottom: 20px;
+  
+}
+.backLink {
+  font-family: 'Poppins', sans-serif; 
+  /* background-color: rgb(244, 163, 132); */
+  /* color: rgb(244, 163, 132) solid; */
+  /* color: darkslategray; */
+  border: rgb(244, 163, 132) solid;
+  color: rgb(244, 163, 132);
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  justify-content: center;
+  width: 200px;
+  padding: 5px;
+  display: inline-flex;
+  /* font-family: 'Roboto', sans-serif; */
+  display: flex;
+  /* margin-top: 50px; */
+  background: none;
+}
+
+.backLink p {
+  margin: 0;
+}
+
+a:link {
+    text-decoration: none;    
+}
+
+/* .detailsContainer .backLink {
+  /* position: absolute; */
+  /* display: flex;
   justify-content: flex-end;
   color: black;
   align-items: center;
@@ -50,7 +103,7 @@ body {
 }
 .backLink:hover svg {
   margin-right: 10px;
-} 
+}  */ 
  
 /*makes the button move to the side when hover*/
 .detailsContainer .backLink svg {
