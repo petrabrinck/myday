@@ -12,7 +12,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center; 
-    color: whitesmoke;
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
   }
@@ -25,18 +24,38 @@
     justify-content: center;
     position: relative;
     align-items: center;
-    padding: 5px;
-    margin: 15px;
+    padding: 8px;
+  
   }   
 
   .myDayPhotos h3 {
     /* margin: 5px 10px 5px 0; */
-    color: #3489c4;
+    /* color: #3489c4; */
     text-align: center;
     text-decoration: none;
-    margin-bottom: 13px;
+    margin: 0 auto; 
+    margin-bottom: 20px;
     font-size: small;
     font: roboto;
+    color: white; 
   }
+
+/*MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  
+  .myDayContainer .myDayPhotos {
+    align-items: flex-end;
+    max-width: 33%;
+    padding: 10px;
+   
+  }
+
+  /* .titleInfo {
+    display: inline-block;
+  } */
+}
+
 
   

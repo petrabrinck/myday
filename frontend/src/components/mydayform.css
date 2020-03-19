@@ -15,7 +15,7 @@
   margin-right: 82px;
 }
 
-.backLinkImg {
+/* .backLinkImg {
   width: 10%;
   margin-right: 10px;
 }
@@ -27,12 +27,12 @@
 }
 .backLink:hover svg {
   margin-right: 10px;
-} 
+}  */
  
 /*makes the button move to the side when hover*/
-.formSection .backLink svg {
+/* .formSection .backLink svg {
   transition: margin-right .3s ease-in-out;   
-} 
+}  */
 
 .header2 {
   display: flex;
