@@ -17,8 +17,6 @@
   }
 
   .myDayPhotos {  
-    /* max-width: 200px;
-    max-height: 200px; */
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -28,17 +26,15 @@
   
   }   
 
-  .myDayPhotos h3 {
-    /* margin: 5px 10px 5px 0; */
-    /* color: #3489c4; */
-    text-align: center;
-    text-decoration: none;
-    margin: 0 auto; 
-    margin-bottom: 20px;
-    font-size: small;
-    font: roboto;
-    color: white; 
-  }
+.myDayPhotos h3 {
+  color: #80f8e6;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto; 
+  margin-bottom: 20px;
+  font-size: small;
+  /* color: white;  */
+}
 
 
 /*MEDIA QUERIES */
@@ -52,10 +48,6 @@
     padding: 10px;
    
   }
-
-  /* .titleInfo {
-    display: inline-block;
-  } */
 }
 
 

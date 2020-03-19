@@ -2,7 +2,6 @@
 /* ******Back link css ********* */
 
 .formSection .backLink {
-  /* position: absolute; */
   display: flex;
   justify-content: flex-end;
   color: black;
@@ -15,42 +14,15 @@
   margin-right: 82px;
 }
 
-/* .backLinkImg {
-  width: 10%;
-  margin-right: 10px;
-}
-
-.backLink p {
-  display: inline-block;
-  margin: 0px;
-  align-items: center;
-}
-.backLink:hover svg {
-  margin-right: 10px;
-}  */
- 
-/*makes the button move to the side when hover*/
-/* .formSection .backLink svg {
-  transition: margin-right .3s ease-in-out;   
-}  */
-
 .header2 {
   font-family: 'Rock Salt', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: darkslategray;
+  color: #80f8e6;
   margin-top: 20px;
 }
-
-/* .formSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row;
-} */
 
 .formSection {
   display: flex;
@@ -61,11 +33,7 @@
   background-repeat: no-repeat; 
   background-size: cover;
   height: 100vh; 
-  /* width: 100%;
-  overflow: hidden;
-  margin: 0px; */
-  /* padding: 0px; */
-  color: whitesmoke;
+  color: white;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
@@ -73,18 +41,11 @@
 .boxes {
   display: flex;
   flex-direction: row;
-  /* flex-flow: row; */
   flex-wrap: wrap; 
   justify-content: center;
-  /* margin-top: 0px;
-  width: 500px; */
-  /* margin: 90px;*/
   margin-bottom: 25px;
 }
 
-/* .questions1 {
-  margin-left: 15px;
-} */
 .checkboxLabel {
   display: flex;
   flex-direction: row;
@@ -100,7 +61,6 @@
   display: inline;
   flex-direction: row;
   color: darkslategray;
- 
 }
 
 textarea {
@@ -111,26 +71,20 @@ textarea {
   width: 200px;
   height: 30px;
 }
+
 .submitBtn {
-  font-family: 'Poppins', sans-serif; 
-  /* background-color: rgb(244, 163, 132); */
-  /* color: rgb(244, 163, 132) solid; */
-  /* color: darkslategray; */
-  border: rgb(244, 163, 132) solid;
-  color: rgb(244, 163, 132);
+  border: #80f8e6 1px solid;
+  color: #80f8e6;
   border-radius: 15px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   justify-content: center;
   width: 200px;
   padding: 5px;
   display: inline-flex;
-  /* font-family: 'Roboto', sans-serif; */
   display: flex;
-  /* margin-top: 50px; */
   background: none;
 }
-
 
 a:link {
     text-decoration: none; 
@@ -138,7 +92,6 @@ a:link {
 }
 
 @media only screen and (min-width: 600px) {
-
   .formSection{
     width: 100%;
   }

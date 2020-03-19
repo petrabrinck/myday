@@ -8,8 +8,7 @@ export const NewDayButton =() => {
     // <div className="ButtonDiv">
       <Link to={`/newReflection/`}>
         <button className="NewDayButton">
-
-        New Day
+        <p>New Day</p>
       </button>
       </Link>
     // </div>

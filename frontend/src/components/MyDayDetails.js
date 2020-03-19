@@ -58,9 +58,9 @@ export const MyDayDetails = props => {
           })}
         {/* </div> */}
 
-        <div className='Summary'>
+        <div className='summary'>
           {/* <h4>Here are today's reflections.</h4> */}
-          <span> 🦋 </span>
+          <span> 🧚🏻‍♀️ </span>
           <h3>I admire: {reflection.messagePeople}</h3>
           <h3>I'm grateful for: {reflection.messageGrateful}</h3>
           <h3>My reflections: {reflection.messageReflections}!</h3>
