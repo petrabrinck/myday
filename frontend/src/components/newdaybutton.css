@@ -1,20 +1,23 @@
 .NewDayButton {
+    font-family: 'Poppins', sans-serif; 
     background-color: rgb(244, 163, 132);
     color: darkslategray;
     border: rgb(244, 163, 132) solid;
-    border-radius: 6px;
+    border-radius: 15px;
     font-weight: 600;
+    font-size: 16px;
+    justify-content: center;
+    width: 200px;
     padding: 5px;
     display: inline-flex;
-    font-family: 'Roboto', sans-serif;
-    /* margin-top: -140px; */
+    /* font-family: 'Roboto', sans-serif; */
     display: flex;
-    margin-top: 50px;
-    margin-left: 40px;
+    /* margin-top: 50px; */
 }
 
 a:link {
     text-decoration: none;
+    
 }
 /* .NewDayButton a {
     text-decoration: none;
