@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MyDay } from './components/MyDay'
 import { MyDayForm } from './components/MyDayForm'
+import { Header } from './components/Header'
 import { MyDayDetails } from './components/MyDayDetails'
 
 
@@ -40,7 +41,10 @@ console.log(reflections)
   return (
     <BrowserRouter>
       <Switch>
+      <div className="mainContainer">
         <Route path="/" exact> 
+       
+        <Header />
           {/* <Header />
             <NewDayButton />  */}
           <MyDay data={reflections} /> 
@@ -52,6 +56,7 @@ console.log(reflections)
         <Route path="/reflections/:reflectionId/">
           <MyDayDetails feelings={feeling}/>
         </Route>
+        </div>
       </Switch>
     </BrowserRouter>
   )

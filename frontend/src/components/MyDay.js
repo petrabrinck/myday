@@ -51,9 +51,10 @@ export const MyDay = ({data}) => {
    
     <div className="myDayContainer">
       {/* <div className="headerContainer"> */}
-        <Header />
+      {/* <NewDayButton />  */}
+    
       {/* </div> */}
-          {/* <NewDayButton />  */}
+         
       {photos.length && combo.map((item) => (
          
         <div className="myDayPhotos" key={item.reflection._id}>
