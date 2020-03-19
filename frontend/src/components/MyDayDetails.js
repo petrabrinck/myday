@@ -6,7 +6,7 @@ import './mydaydetails.css'
 // const id = "{${reflection._id}}"
 // const url = "https://api.pexels.com/search?q=${reflection._id}"
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
-const url = "https://api.pexels.com/v1/search?query=example+paradise&per_page=55&page=2"
+const url = "https://api.pexels.com/v1/search?query=example+waterdrops&per_page=55&page=2"
 
 export const MyDayDetails = (props) => {
     const feelings = props.feelings

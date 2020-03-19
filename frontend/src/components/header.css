@@ -2,7 +2,7 @@
   margin: 0;
   width: 100%;
   height: 200px;
-  background-color: #e5faf5;
+  /* background-color: #e5faf5; */
   align-content: center;
 }
 
@@ -13,3 +13,24 @@
   font-family: 'Rock Salt', cursive;
   font-size: 74px;
 }
+/* 
+.header-icons {
+  display: flex;
+  text-align: center;
+}
+
+.hIconCircle {
+  width: 49px;
+  height: 49px;
+  border: 3px solid #ffff;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hIconImg {
+  width: 22px;
+  height: 22px;
+} */
