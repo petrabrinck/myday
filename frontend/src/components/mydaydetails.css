@@ -20,6 +20,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.detailsContainer h2 {
+  font-family: 'Rock Salt', cursive;
+} 
+
 .detailsContainer .backLink {
   /* position: absolute; */
   display: flex;

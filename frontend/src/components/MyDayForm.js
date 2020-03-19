@@ -116,7 +116,7 @@ console.log("fredag den 13")
           </section>
         <button className="submitBtn"
           onClick={(event) => handleSubmit(event)}
-          >SUBMIT
+          >Submit
         </button>
       </form>
       {/* <Link className="backLink" to={`/`}>

@@ -48,8 +48,8 @@ export const MyDayDetails = props => {
                 <p>Back</p>
             </Link> */}
         <div>
-          <h2>Awesome!</h2>
-          <h2>Your day:</h2>
+          <h2>Great to see you again!</h2>
+          <h2>Your saved reflections,</h2>
           {feelings.map((item, index) => {
             if (savedFeelings[index] === 'true') {
               return <h3 key={index}>{item}</h3>
@@ -58,7 +58,7 @@ export const MyDayDetails = props => {
         </div>
 
         <div className='Summary'>
-          <h2>Here are today's reflections.</h2>
+          {/* <h4>Here are today's reflections.</h4> */}
           <p>You admire these two persons {reflection.messagePeople}</p>
           <p>Two things I'm grateful for: {reflection.messageGrateful}</p>
           <p>My reflections{reflection.messageReflections}!</p>
