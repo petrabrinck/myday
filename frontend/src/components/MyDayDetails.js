@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import './mydaydetails.css'
 
-// const id = "{${reflection._id}}"
-// const url = "https://api.pexels.com/search?q=${reflection._id}"
+
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
 const url =
   'https://api.pexels.com/v1/search?query=example+waterdrops&per_page=55&page=2'
@@ -41,51 +40,30 @@ export const MyDayDetails = props => {
   if (reflection) {
     return (
       <section className='detailsContainer'>
-        {/* Link and svg for "Go Back"-button */}
-        {/* <Link className="backLink" to={`/`}>
-                <svg className="backLinkImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                    <path d="M27 14.5C27 7.596441 21.4035594 2 14.5 2S2 7.596441 2 14.5 7.5964406 27 14.5 27 27 21.403559 27 14.5zm-19.3388348-.353553l7.4852814-7.485282c.1952622-.195262.5118446-.195262.7071068 0l2.1213203 2.121321c.1952622.195262.1952622.511844 0 .707106L12.9644661 14.5l5.0104076 5.010408c.1952622.195262.1952622.511844 0 .707106l-2.1213203 2.121321c-.1952622.195262-.5118446.195262-.7071068 0l-7.4852814-7.485282c-.19799-.19799-.197989-.509117 0-.707106z" fill="#000" fillRule="evenodd"></path></svg>
-                <p>Back</p>
-            </Link> */}
-        <div className="reflectionSummary">
-          <h2>Great to see you again!</h2>
-          <h3>Memories from this day</h3> 
-          
-          {feelings.map((item, index) => {
-            if (savedFeelings[index] === 'true') {
-              return <h3 key={index}>{item}</h3>
-            }
-          })}
-        {/* </div> */}
-
-        <div className='summary'>
-          {/* <h4>Here are today's reflections.</h4> */}
-          <span> 🧚🏻‍♀️ </span>
-          <h3>I admire: {reflection.messagePeople}</h3>
-          <h3>I'm grateful for: {reflection.messageGrateful}</h3>
-          <h3>My reflections: {reflection.messageReflections}!</h3>
-          {/* <p>My reflections: {reflection.messageLookForward}.</p> */}
+        {/* div for hidden quote upon hover */}
+        <div className="quotePost">
+          <div className="quoteWords">
+             <h2>Remember you are awesome</h2>
+          </div>
+          <div className="reflectionSummary">
+            <h2>Great to see you again!</h2>
+            <h3>Memories from this day</h3> 
+            {feelings.map((item, index) => {
+              if (savedFeelings[index] === 'true') {
+                return <h3 key={index}>{item}</h3>
+              }
+            })}
+            <div className='summary'>
+              <span> 🧚🏻‍♀️ </span>
+              <h3>I admire: {reflection.messagePeople}</h3>
+              <h3>I'm grateful for: {reflection.messageGrateful}</h3>
+              <h3>My reflections: {reflection.messageReflections}!</h3>
+              {/* <p>My reflections: {reflection.messageLookForward}.</p> */}
+            </div>
+          </div>
         </div>
-        </div>
-        {/* <Link className='backLink' to={`/`}>
-        <button className="submitBtn"
-          onClick={(event) => handleSubmit(event)}
-          >Go back
-        </button>
-        </Link> */}
         <Link className='backLink' to={`/`}>
-          {/* <svg
-            className='backLinkImg'
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 30 30'
-          > */}
-            {/* <path
-              d='M27 14.5C27 7.596441 21.4035594 2 14.5 2S2 7.596441 2 14.5 7.5964406 27 14.5 27 27 21.403559 27 14.5zm-19.3388348-.353553l7.4852814-7.485282c.1952622-.195262.5118446-.195262.7071068 0l2.1213203 2.121321c.1952622.195262.1952622.511844 0 .707106L12.9644661 14.5l5.0104076 5.010408c.1952622.195262.1952622.511844 0 .707106l-2.1213203 2.121321c-.1952622.195262-.5118446.195262-.7071068 0l-7.4852814-7.485282c-.19799-.19799-.197989-.509117 0-.707106z'
-              fill='#fff'
-              fillRule='evenodd'
-            ></path> */}
-          {/* </svg> */}
-          <p>Go back</p>
+          <p>Back</p>
         </Link>
       </section>
     )
