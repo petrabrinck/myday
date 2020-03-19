@@ -48,8 +48,11 @@ export const MyDay = ({data}) => {
  
 
   return (
+   
     <div className="myDayContainer">
-      <Header />
+      {/* <div className="headerContainer"> */}
+        <Header />
+      {/* </div> */}
           {/* <NewDayButton />  */}
       {photos.length && combo.map((item) => (
          
