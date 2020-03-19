@@ -11,8 +11,8 @@ const url = "https://api.pexels.com/v1/search?query=example+waterdrops&per_page=
 export const MyDayDetails = (props) => {
     const feelings = props.feelings
     const { reflectionId } = useParams()
-    const [ reflection, setReflection ] = useState ([])
-    const [ feelingsChecked, setFeelingsChecked] = useState ([])
+    const [ reflection, setReflection ] = useState({})
+   
     console.log(reflectionId)
     
     useEffect(() => {
@@ -22,19 +22,25 @@ export const MyDayDetails = (props) => {
         .then((res) => res.json())
         .then((json) => {
             setReflection(json)
-            // setFeelingsChecked([json.feelings])
-            setFeelingsChecked([json.feeling1, json.feeling2])
-            // setFeelingsChecked([json.feeling1, json.feeling2, json.feeling3, json.feeling4, json.feeling5, json.feeling6, json.feeling7, json.feeling8])
-            console.log(json)
         })  
     }, [reflectionId])
+
+    const showFeelings = () => {
+        console.log('im in showFeeelings')
+        console.log(reflection)
+        const checkedFeelings = [reflection.feeling1, reflection.feeling2, reflection.feeling3, reflection.feeling4, reflection.feeling5, reflection.feeling6]
+        console.log(checkedFeelings)
+         
+        feelings.filter((feeling, index) => (checkedFeelings[index] === true) )
+
+    }
 
     if (!reflection) {
         return <div>Ups, need a moment...</div>
     }
 
 
-    return(
+    if (reflection) return (
         <section className="detailsContainer">
 
             {/* Link and svg for "Go Back"-button */}
@@ -46,12 +52,7 @@ export const MyDayDetails = (props) => {
             <div>
                 <h2>Awesome!</h2>
                 <h2>Your day:</h2>
-                {feelings.map((feeling, index) =>  {
-                  if (!feelingsChecked[index])return null
-                  return(
-                    <p> {feeling} </p>
-                  )
-                })}
+                {showFeelings() && feelings.map(f => <p>{f}</p>)}
             </div>
    
              

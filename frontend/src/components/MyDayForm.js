@@ -26,6 +26,7 @@ export const MyDayForm = props => {
   
   // const [feeling, setFeeling] = useState("")
   const [message, setMessage] = useState("")
+
   const handleSubmit = event => {
     event.preventDefault()
     fetch(url, {
@@ -53,6 +54,9 @@ export const MyDayForm = props => {
             console.log(json)
     // props.onFormSubmit(message)
     setMessage("")
+    setSubmitted(true)
+    window.history.back();
+
     })}  
 console.log("fredag den 13")
 
@@ -66,6 +70,7 @@ console.log("fredag den 13")
       <div className="header2">
         <h1>Time to reflect</h1>
       </div>
+      {submitted && <h1>You're reflection was saved!</h1>}
         <form className='form' onSubmit={event => event.preventDefault()}>
         <section className="boxes">
           <div className="questions1">
