@@ -18,12 +18,12 @@ body {
 }
 
 .detailsContainer h2 {
-  font-family: 'Rock Salt', cursive;
-  color: #80f8e6;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Rock Salt', cursive;
+  color: #80f8e6;  
 } 
 
 span {
@@ -48,23 +48,20 @@ span {
   display: flex;
   flex-flow: row;
   justify-content: center;
-  /* align-items: center; */
   text-align: center;
 }
 
 .quoteWords {
-  position: absolute;
-  max-width: 200px;
-  /* margin-bottom: 10px; */
   display: flex;
   flex-flow: row;
   justify-content: center;
-  /* align-items: center; */
   text-align: center;
   background-size: cover;
-  /* padding: 20px; */
+  position: absolute;
+  max-width: 200px;
   opacity: 0;
   z-index: 2;
+  margin-top: 30px;
 }
 
 .quoteWords h2 {
@@ -83,16 +80,15 @@ span {
 }
 
 .backLink {
+  display: flex;
+  justify-content: center;
   border: #80f8e6 1px solid;
   color: #80f8e6;
   border-radius: 15px;
   font-weight: 600;
   font-size: 16px;
-  justify-content: center;
   width: 200px;
   padding: 5px;
-  display: inline-flex;
-  display: flex;
   background: none;
 }
 
@@ -101,9 +97,8 @@ span {
 }
 
 a:link {
-    text-decoration: none;    
+  text-decoration: none;    
 }
-
 
 @media only screen and (min-width: 600px) {
   .detailsContainer{

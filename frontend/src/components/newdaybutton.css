@@ -1,15 +1,14 @@
 .NewDayButton {
+  display: flex;
+  justify-content: center;
   font-family: 'Bellota Text', cursive;
   border: #80f8e6 1px solid;
   color: #80f8e6;
   border-radius: 15px;
   font-size: 16px;
   font-weight: 700;
-  justify-content: center;
   width: 200px;
   padding: 5px;
-  display: inline-flex;
-  display: flex;
   background: none;
 }
 

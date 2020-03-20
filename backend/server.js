@@ -27,12 +27,7 @@ const Reflection = mongoose.model('Reflection', {
   feeling6: { 
     type: String,
   },
-  // feeling7: { 
-  //   type: String,
-  // },
-  // feeling8: { 
-  //   type: String,
-  // },
+
   messagePeople: {
     type: String,
     minlength: 1,
@@ -58,34 +53,24 @@ const Reflection = mongoose.model('Reflection', {
     default: Date.now
   }
 })
-// Defines the port the app will run on. Defaults to 8080, but can be 
-// overridden when starting the server. For example:
-//
-//   PORT=9000 npm start
+
 const port = process.env.PORT || 9000
 const app = express()
 
-// Add middlewares to enable cors and json body parsing
 app.use(cors())
 app.use(bodyParser.json())
 
-// Start defining your routes here
-//Theresa added down below from 51-55
 app.get('/', async (req, res) => {
   const reflections = await Reflection.find().sort({createdAt: 'desc'}).limit(140).exec()
   res.json(reflections)
 })
 
 app.post('/', async (req, res) => {
-  //Retrieve the information sent by the client to our API endpoint
   const {message} = req.body
   console.log(req.body)
 
-  //Use our mongoose model to create the database entry
   const reflection = new Reflection(req.body)
-
   try {
-    //Success
     const savedReflection = await reflection.save()
     res.status(201).json(savedReflection)
   }catch (err) {
@@ -93,7 +78,6 @@ app.post('/', async (req, res) => {
   }
 })
 
-// GET FOR SPECIFIC GUEST ID
 app.get('/reflections/:id', async (req, res) => {
   const reflection = await Reflection.findById(req.params.id)
   if (reflection) {
@@ -103,17 +87,6 @@ app.get('/reflections/:id', async (req, res) => {
   }
 })
 
-// console.log(reflections)
-
-// app.post('/reflection', async (req, res) => {
-//     const reflection = new Reflection({ message }) // removed checkbox allt här som ska sparas
-//     const savedReflection = await reflection.save()
-//     res.status(201).json(savedReflection)
-// })
-
-// hej hej //
-
-// Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)
 })

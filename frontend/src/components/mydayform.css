@@ -1,9 +1,9 @@
 .header2 {
-  font-family: 'Rock Salt', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Rock Salt', cursive;
   color: #80f8e6;
   margin-top: -51px;
 }
@@ -61,15 +61,15 @@ textarea {
 }
 
 .submitBtn {
+  display: flex;
+  justify-content: center;
   border: #80f8e6 1px solid;
   color: #80f8e6;
   border-radius: 15px;
   font-weight: 700;
   font-size: 16px;
-  justify-content: center;
   width: 200px;
   padding: 5px;
-  display: flex;
   background: none;
   margin: auto;
 }

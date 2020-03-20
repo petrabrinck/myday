@@ -1,6 +1,4 @@
- 
 import React, { useState, useEffect } from "react"
-import { useParams } from 'react-router-dom'
 import "./mydayform.css"
 
 const url ="http://localhost:9000"
@@ -10,15 +8,11 @@ const feelingsChecked = [false, false, false, false, false, false]
 
 export const MyDayForm = props => {
   const feeling = props.feelings
-  const { myDay2 } = useParams()
   const [questions1, setQuestions1] = useState()
   const [questions2, setQuestions2] = useState()
   const [questions3, setQuestions3] = useState()
   const [questions4, setQuestions4] = useState()
-  const [name, setName] = useState("");
-  const [photo, setPhoto] = useState([])
   const [submitted, setSubmitted] = useState(false)
-  
   const [message, setMessage] = useState("")
 
   const handleSubmit = event => {
@@ -32,7 +26,6 @@ export const MyDayForm = props => {
         feeling4: feelingsChecked[3],
         feeling5: feelingsChecked[4],
         feeling6: feelingsChecked[5],
-
         messagePeople: questions1,
         messageGrateful: questions2,
         messageLookForward: questions3,
@@ -46,9 +39,7 @@ export const MyDayForm = props => {
     setMessage("")
     setSubmitted(true)
     window.history.back();
-
     })}  
-console.log("fredag den 13")
 
   return ( 
     <section className='formSection'>
@@ -57,49 +48,46 @@ console.log("fredag den 13")
       </div>
       {submitted && <h1>You're reflection was saved!</h1>}
         <form className='form' onSubmit={event => event.preventDefault()}>
-        <section className="boxes">
-          <div className="questions1">
-            {feeling.map((item, index) => (
-              <label className="checkboxLabel" key={item}>
-                <input className="questions1"
-                  type="checkbox"
-                  value={item}
-                  onChange={() => feelingsChecked[index]=true}
-                />
-                {item}
-              </label>
-            ))}
-          </div>
-         
-        </section>
-          <section className="formInputSection">
-          <h4>Two people who I admire</h4>
-          <textarea
-            rows='3'
-            onChange={event => setQuestions1(event.target.value)}
-            ></textarea> 
-          
-          <h4>Two things I'm grateful for</h4>
-            <textarea
-            rows='3'
-            onChange={event => setQuestions2(event.target.value)}
-             ></textarea>
-          <h4>Two things I'm grateful for</h4>
-            <textarea
-            rows='3'
-            onChange={event => setQuestions2(event.target.value)}
-             ></textarea>
-          <h4>Reflections</h4>
-            <textarea
-            rows='3'
-            onChange={event => setQuestions4(event.target.value)}
-            ></textarea> 
-
+          <section className="boxes">
+            <div className="questions1">
+              {feeling.map((item, index) => (
+                <label className="checkboxLabel" key={item}>
+                  <input className="questions1"
+                    type="checkbox"
+                    value={item}
+                    onChange={() => feelingsChecked[index]=true}
+                  />
+                  {item}
+                </label>
+              ))}
+            </div>    
           </section>
-        <button className="submitBtn"
-          onClick={(event) => handleSubmit(event)}
-          >Submit / Back
-        </button>
+          <section className="formInputSection">
+            <h4>Two people who I admire</h4>
+            <textarea
+              rows='3'
+              onChange={event => setQuestions1(event.target.value)}
+              ></textarea> 
+            <h4>I'm grateful for</h4>
+              <textarea
+              rows='3'
+              onChange={event => setQuestions2(event.target.value)}
+              ></textarea>
+            <h4>I look forward to</h4>
+              <textarea
+              rows='3'
+              onChange={event => setQuestions3(event.target.value)}
+              ></textarea>
+            <h4>Reflections</h4>
+              <textarea
+              rows='3'
+              onChange={event => setQuestions4(event.target.value)}
+              ></textarea> 
+            </section>
+          <button className="submitBtn"
+            onClick={(event) => handleSubmit(event)}
+            >Submit / Back
+          </button>
       </form>
     </section>
   )
