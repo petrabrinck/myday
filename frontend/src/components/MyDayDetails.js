@@ -43,8 +43,9 @@ export const MyDayDetails = props => {
         {/* div for hidden quote upon hover */}
         <div className="quotePost">
           <div className="quoteWords">
-             <h2>Remember you are awesome</h2>
+             <h2>With the new day comes new strength & new thoughts!</h2>
           </div>
+         
           <div className="reflectionSummary">
             <h2>Great to see you again!</h2>
             <h3>Memories from this day</h3> 

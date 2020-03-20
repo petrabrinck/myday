@@ -44,17 +44,31 @@ span {
   margin-bottom: 20px;
 }
 
+.quotePost {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+}
+
 .quoteWords {
   position: absolute;
+  max-width: 200px;
+  /* margin-bottom: 10px; */
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
   background-size: cover;
-  padding: 20px;
+  /* padding: 20px; */
   opacity: 0;
   z-index: 2;
+}
+
+.quoteWords h2 {
+  font-size: 24px;
 }
 
 .quotePost:hover .reflectionSummary {
