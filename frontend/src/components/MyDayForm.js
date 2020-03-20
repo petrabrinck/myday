@@ -84,6 +84,11 @@ console.log("fredag den 13")
             rows='3'
             onChange={event => setQuestions2(event.target.value)}
              ></textarea>
+          <h4>Two things I'm grateful for</h4>
+            <textarea
+            rows='3'
+            onChange={event => setQuestions2(event.target.value)}
+             ></textarea>
           <h4>Reflections</h4>
             <textarea
             rows='3'
