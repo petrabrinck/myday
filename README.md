@@ -7,15 +7,20 @@ There is seldom or maybe more closer to the truth, never any space for honest re
 So we created a web application that offers a space for (inner) reflection.
 We call it My Day and it is our version of a digital journal.
 
-## The vision
+## Tools and techniques
 
-Front-end in React 
-Back-end in Node.js
-MongoDB database
-Navigation using React Router
-Should work in Chrome, Firefox & Safari.
-Be responsive and work well on mobile, tablet and phone.
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We used these tools and techniques:
+- Front-end in React 
+- Back-end in Node.js
+- MongoDB database
+- Navigation using React Router
+- Should work in Chrome & Safari
+- It is responsive and works on mobile, tablet and phone
+
+The challenge we had was to combine the saved message with data to an exicting picture fetched from an external API. Initially we could see the data in the database but it wasn't visable in the frontend. When we managed to combine these two techniques, we could both save and post the data together with the picture. 
+
+## The vision
+If we had more time
 
 ## View it live
 
