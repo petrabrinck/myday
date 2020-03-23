@@ -1,11 +1,20 @@
-# Project Auth
+# Final Project MyDay
 
-Replace this readme with your own information about your project.
+Most of us have some kind of social media ”app” where we spend time, like Facebook or Instagram and they are often perceived as being superficial.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+There is seldom or maybe more closer to the truth, never any space for honest reflections and we believe that it's essential for our wellbeing to reflect on a daily basis.
 
-## The problem
+So we created a web application that offers a space for (inner) reflection.
+We call it My Day and it is our version of a digital journal.
 
+## The vision
+
+Front-end in React 
+Back-end in Node.js
+MongoDB database
+Navigation using React Router
+Should work in Chrome, Firefox & Safari.
+Be responsive and work well on mobile, tablet and phone.
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
