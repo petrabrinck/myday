@@ -1,4 +1,4 @@
-# Final Project MyDay
+# Final Project My Day
 
 Most of us have some kind of social media ”app” where we spend time, like Facebook or Instagram and they are often perceived as being superficial.
 
