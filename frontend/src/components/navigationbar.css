@@ -1,0 +1,22 @@
+/* .navMenu {
+    font-family: sans-serif;
+  }
+   */
+  .navMenu a {
+    color: #80f8e6;
+  }
+
+  .navMenu p {
+    font-family: 'Rock Salt', cursive;
+    color: #80f8e6;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* .navMenu {
+    background-color: yellow;
+  } */
+
+  /* .navTheme {
+    color: #80f8e6;
+  } */
