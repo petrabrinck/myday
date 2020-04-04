@@ -19,6 +19,7 @@
 }
 
 .headerInfo {
+  margin-top: 45px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,9 +34,13 @@
 
 .headerSection h1{
   margin: 0;
+  padding-top: 90px;
   text-align: center;
   color: #80f8e6;
-  font-family: 'Rock Salt', cursive;
+  /* font-family: 'Rock Salt', cursive; */
+  font-family: 'Great Vibes', cursive;
+  /* font-family: 'Tangerine', cursive; */
+  /* font-family: 'Parisienne', cursive; */
   font-size: 65px;
   margin-bottom: 5px;
 }

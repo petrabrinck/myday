@@ -1,22 +1,26 @@
-/* .navMenu {
-    font-family: sans-serif;
-  }
-   */
-  .navMenu a {
-    color: #80f8e6;
-  }
+.nav--animate {
+  background-color: #0f211d;
+  cursor: pointer;
+}
 
-  .navMenu p {
-    font-family: 'Rock Salt', cursive;
-    color: #80f8e6;
-    padding: 0;
-    margin: 0;
-  }
+.nav-links__group.right{
+  display: block;
+}
 
-  /* .navMenu {
-    background-color: yellow;
-  } */
+.nav-links__group.left {
+  display: block;
+}
 
-  /* .navTheme {
-    color: #80f8e6;
-  } */
+.navMenu a {
+  color: #80f8e6;
+}
+
+.navMenu p {
+  /* font-family: 'Rock Salt', cursive; */
+  font-family: 'Great Vibes', cursive;
+  /* font-family: 'Parisienne', cursive; */
+  font-size: 30px;
+  color: #80f8e6;
+  padding: 0;
+  margin: 0;
+}

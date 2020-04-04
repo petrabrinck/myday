@@ -9,20 +9,19 @@ const navTheme: ThemeProps = {
 
 // const navBrand = <a className="brand" href="#null">Base Corp.</a>
 
-const navBrand = <a className="brand" href="#null"><p>Base Corp.</p></a> 
+const navBrand = <a className="brand" href="#null"><p>My Day</p></a> 
 
 const leftLinks = (
   <>
-    <a href="#null">Our Plans</a>
-    <a href="#null">How It Works</a>
-    <a href="#null">Our Menus</a>
+    <a href="#null">New Day</a>
+    <a href="#null">Your Reflections</a>
   </>
 )
 
 const rightLinks = (
   <>
-    <a href="#null">Get Started</a>
-    <a href="#null">Sign In</a>
+    <a href="#null">Log In</a>
+    <a href="#null">Sign Up</a>
   </>
 )
 
