@@ -3,13 +3,13 @@
   cursor: pointer;
 }
 
-.nav-links__group.right{
+/* .nav-links__group.right{
   display: block;
-}
+} */
 
-.nav-links__group.left {
+/* .nav-links__group.left {
   display: block;
-}
+} */
 
 .navMenu a {
   color: #80f8e6;
@@ -23,4 +23,13 @@
   color: #80f8e6;
   padding: 0;
   margin: 0;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .nav-links__group.right , 
+  .nav-links__group.left{
+    display: block;
+  }
+
 }
