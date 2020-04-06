@@ -14,16 +14,23 @@
     justify-content: center; 
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
-  }
+}
 
-  .myDayPhotos {  
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 8px;
-  }   
+h3 {
+  margin-left: 45px;
+  inline-size: -webkit-fill-available;
+  color: #80f8e6;
+}
+
+
+.myDayPhotos {  
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 8px;
+}   
 
 .myDayPhotos h3 {
   text-align: center;

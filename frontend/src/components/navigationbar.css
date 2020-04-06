@@ -1,6 +1,15 @@
 .nav--animate {
-  background-color: #0f211d;
+  /* background-color: #0f211d; */
   cursor: pointer;
+}
+
+.nav {
+  background-color: #0f211d;
+} 
+
+.nav-links__group.right , 
+.nav-links__group.left{
+  color: #80f8e6;
 }
 
 /* .nav-links__group.right{

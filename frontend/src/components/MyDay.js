@@ -36,15 +36,16 @@ export const MyDay = () => {
   console.log(combo)
  
   return (
-    <div className="myDayContainer">      
-      {photos.length && combo.map((item) => (
-        <div className="myDayPhotos" key={item.reflection._id}>       
-          <Link to={`/reflections/${item.reflection._id}`}>
-            <img src={item.photo.src.tiny} />
-            <h3>{moment(item.reflection.createdAt).format('MMMM Do YYYY')} </h3>  
-          </Link>
-        </div>
-      ))}
+    <div className="myDayContainer">   
+      <h3>Your calender of reflections:</h3>   
+        {photos.length && combo.map((item) => (
+          <div className="myDayPhotos" key={item.reflection._id}>       
+            <Link to={`/reflections/${item.reflection._id}`}>
+              <img src={item.photo.src.tiny} />
+              <h3>{moment(item.reflection.createdAt).format('MMMM Do YYYY')} </h3>  
+            </Link>
+          </div>
+        ))}
     </div>
   )
 }
