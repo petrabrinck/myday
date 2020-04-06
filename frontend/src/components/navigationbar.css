@@ -1,11 +1,23 @@
-.nav--animate {
-  /* background-color: #0f211d; */
+nav.nav.nav--animate {
+  background-color: yellow;
   cursor: pointer;
 }
 
-.nav {
+/* .nav {
   background-color: #0f211d;
-} 
+}  */
+
+/* .nav .navMenu {
+  background-color: #0f211d;
+} */
+
+/* .navbar {
+  background-color: #0f211d;
+} */
+/* 
+style .navbar--menu {
+  background-color: #0f211d;
+} */
 
 .nav-links__group.right , 
 .nav-links__group.left{
