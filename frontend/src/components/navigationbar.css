@@ -1,36 +1,12 @@
 nav.nav.nav--animate {
-  background-color: yellow;
+  background-color: #0f211d;
   cursor: pointer;
 }
-
-/* .nav {
-  background-color: #0f211d;
-}  */
-
-/* .nav .navMenu {
-  background-color: #0f211d;
-} */
-
-/* .navbar {
-  background-color: #0f211d;
-} */
-/* 
-style .navbar--menu {
-  background-color: #0f211d;
-} */
 
 .nav-links__group.right , 
 .nav-links__group.left{
   color: #80f8e6;
 }
-
-/* .nav-links__group.right{
-  display: block;
-} */
-
-/* .nav-links__group.left {
-  display: block;
-} */
 
 .navMenu a {
   color: #80f8e6;
