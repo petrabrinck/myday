@@ -27,7 +27,6 @@
 }
 
 .headerSection {
-  height: 300px;
   width: 100%;
   margin: 0;
 }
@@ -43,4 +42,36 @@
   /* font-family: 'Parisienne', cursive; */
   font-size: 65px;
   margin-bottom: 5px;
+}
+
+.welcomeText {
+  display: flex;
+  margin-bottom: 50px;
+  flex-direction: column;
+  padding: 0px; 
+} 
+
+.welcomeText h4 {
+  text-align: left;
+  color: aliceblue;
+  max-width: 280px;
+  display: flex;
+  margin-bottom: 0;
+} 
+
+/* .extraText h4 {
+  display: none;
+} */
+
+.newDayButtonDiv {
+  display:flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcomeText h4 {
+    max-width: 600px;
+  }
+  
 }

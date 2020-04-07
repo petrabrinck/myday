@@ -37,7 +37,7 @@ export const MyDay = () => {
  
   return (
     <div className="myDayContainer">   
-      <h3>Your calender of reflections:</h3>   
+      {/* <h3>Your calender of reflections:</h3>    */}
         {photos.length && combo.map((item) => (
           <div className="myDayPhotos" key={item.reflection._id}>       
             <Link to={`/reflections/${item.reflection._id}`}>
