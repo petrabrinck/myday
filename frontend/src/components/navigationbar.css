@@ -28,5 +28,7 @@ nav.nav.nav--animate {
   .nav-links__group.left{
     display: block;
   }
-
+ .nav {
+   box-shadow: none;
+ }
 }
