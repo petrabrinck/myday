@@ -22,6 +22,7 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  /* font-family: 'Great Vibes', cursive; */
   font-family: 'Rock Salt', cursive;
   color: #80f8e6;  
 } 
