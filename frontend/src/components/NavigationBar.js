@@ -13,8 +13,8 @@ const navBrand = <a className="brand" href="#null"><p>My Day</p></a>
 
 const leftLinks = (
   <>
-    <a href="/newReflection/">New Day</a>
-    <a href="#null">Your Reflections</a>
+    {/* <a href="/newReflection/">New Day</a>
+    <a href="#null">Your Reflections</a> */}
   </>
 )
 
@@ -22,6 +22,8 @@ const rightLinks = (
   <>
     <a href="#null">Log In</a>
     <a href="#null">Sign Up</a>
+    <a href="/newReflection/">New Day</a>
+    <a href="#null">Your Reflections</a>
   </>
 )
 
