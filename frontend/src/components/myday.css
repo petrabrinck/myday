@@ -1,14 +1,12 @@
 
 .mainContainer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
   url('../assets/forest.jpeg');
   background-repeat: no-repeat; 
   background-size: cover;
-  /* background-position: bottom;
-  background-attachment: fixed;
-  background-color: darkolivegreen;*/
-  width: 100%; 
-  height: auto;
+  background-position: bottom;
+  background-attachment: fixed; */
+  background-color: darkolivegreen;
 }
 
 .myDayContainer {
@@ -33,7 +31,7 @@
   text-align: center;
   text-decoration: none;
   margin: 0 auto; 
-  margin-bottom: 20px;
+  /* margin-bottom: 15px; */
   font-size: small;
   color: #80f8e6;
 }
@@ -41,8 +39,9 @@
 @media only screen and (min-width: 768px) {
     .myDayContainer .myDayPhotos {
     align-items: flex-end;
-    max-width: 33%;
+    /* max-width: 33%; */
     padding: 10px;
+    margin: 0px 35px;
   }
 }
 
