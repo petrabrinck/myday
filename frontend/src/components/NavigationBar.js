@@ -20,8 +20,8 @@ const leftLinks = (
 
 const rightLinks = (
   <>
-    <a href="#null">Log In</a>
-    <a href="#null">Sign Up</a>
+    {/* <a href="#null">Log In</a>
+    <a href="#null">Sign Up</a> */}
     <a href="/newReflection/">New Day</a>
     <a href="#null">Your Reflections</a>
   </>

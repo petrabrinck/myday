@@ -55,6 +55,7 @@ const Reflection = mongoose.model('Reflection', {
 })
 
 const port = process.env.PORT || 9000
+// const port = process.env.PORT || 8080
 const app = express()
 
 app.use(cors())
