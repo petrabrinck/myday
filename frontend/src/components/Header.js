@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <section className='headerSection'>
       <NavigationBar />
-      {/* <div class="header-icons">
+      <div class="header-icons">
           <div class="hIconCircle">
             <a href="https://www.linkedin.com/in/theresa-ulwahn-b719259/" target="_blank">
               <img
@@ -34,8 +34,8 @@ export const Header = () => {
                 class="hIconImg"
                 alt="InstagramLogo"
             /></a>
-          </div> */}
-        {/* </div> */}
+          </div>
+        </div>
       <div className="headerInfo">
         <h1>My Day </h1> 
           <div className="welcomeText">  
