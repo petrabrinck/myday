@@ -5,6 +5,8 @@ import { MyDayForm } from './components/MyDayForm'
 import { Header } from './components/Header'
 import { MyDayDetails } from './components/MyDayDetails'
 import { Login } from './components/Login'
+import { Registration } from './components/Registration'
+
 
 const url = "https://myday-reflection.herokuapp.com/"
 // const url = "http://localhost:9000/"
@@ -29,7 +31,7 @@ export const App = () => {
         <Route path="/" exact>    
         {/* Added exact above */}
         <div className="authContainer">
-          {/* <Registration /> */}
+          <Registration />
           <Login />
         </div>
         </Route>
