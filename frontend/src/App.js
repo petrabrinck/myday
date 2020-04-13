@@ -4,6 +4,7 @@ import { MyDay } from './components/MyDay'
 import { MyDayForm } from './components/MyDayForm'
 import { Header } from './components/Header'
 import { MyDayDetails } from './components/MyDayDetails'
+import { Login } from './components/Login'
 
 const url = "https://myday-reflection.herokuapp.com/"
 // const url = "http://localhost:9000/"
@@ -11,7 +12,6 @@ const url = "https://myday-reflection.herokuapp.com/"
 export const App = () => {
   const [postedReflection, setPostedReflection] = useState("")
   const feeling = ['I feel happy today', 'I feel strong', 'I took a walk', 'I went to the gym', 'I got a compliment', 'I gave someone a hug']
-
   const handleFormSubmit = message => {
     fetch(url, {
       method: "POST",
@@ -21,12 +21,26 @@ export const App = () => {
       .then(() => setPostedReflection(message))
       .catch(err => console.log("error:", err))
   }
-
   return (
     <BrowserRouter>
       <Switch>
+
+          {/* Route for Singing up new member and logging in exicsting member */}
+        <Route path="/" exact>    
+        {/* Added exact above */}
+        <div className="authContainer">
+          {/* <Registration /> */}
+          <Login />
+        </div>
+        </Route>
+        {/* Route for memberpage   */}
+        {/* <Route path="/MemberPage">
+          <MemberPage />
+        </Route> */}
+
         <div className="mainContainer">
-          <Route path="/" exact> 
+          <Route path="/MyDay" > 
+          {/* <Route path="/" exact>  */}
             <Header />
             <MyDay /> 
           </Route>
