@@ -2,8 +2,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import mongoose from 'mongoose'
-import crypto from 'crypto';
-import bcrypt from 'bcrypt-nodejs';
+import crypto from 'crypto'
+import bcrypt from 'bcrypt'
 
 // const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/myday'
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/myday'
@@ -39,8 +39,8 @@ const port = process.env.PORT || 9000;
 const app = express();
 
 // Add middlewares to enable cors and json body parsing
-app.use(cors());
-app.use(bodyParser.json());
+// app.use(cors());
+// app.use(bodyParser.json());
 
 const authenticateUser = async (req, res, next) => {
   try {
@@ -62,9 +62,9 @@ const authenticateUser = async (req, res, next) => {
 }
 
 // Start defining your routes here
-app.get('/', (req, res) => {
-  res.send('Hello world');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello world');
+// });
 
 // Creating user who is signing up
 app.post('/register', async (req, res) => {
@@ -166,9 +166,10 @@ const Reflection = mongoose.model('Reflection', {
 // const port = process.env.PORT || 9000
 // const port = process.env.PORT || 8080
 
-const app = express()
-app.use(cors())
-app.use(bodyParser.json())
+// const app = express()
+// app.use(cors())
+// app.use(bodyParser.json())
+
 app.get('/', async (req, res) => {
   const reflections = await Reflection.find().sort({createdAt: 'desc'}).limit(140).exec()
   res.json(reflections)

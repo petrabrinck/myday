@@ -31,8 +31,9 @@ export const App = () => {
         <Route path="/" exact>    
         {/* Added exact above */}
         <div className="authContainer">
-          <Registration />
+          {/* <Registration /> */}
           <Login />
+             {/* <Registration /> */}
         </div>
         </Route>
         {/* Route for memberpage   */}

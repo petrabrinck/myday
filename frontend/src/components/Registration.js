@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './registration.css' 
 
 
@@ -64,7 +65,11 @@ export const Registration = () => {
           {errorMsg && <div className="error-message"> {errorMsg} </div>}
           {successMsg && <div className="success-message"> {successMsg} </div>}
     
+          <Link to={`/MyDay/`}>
             <button onClick={handleFormSubmit} type="submit" >Submit</button>
+          </Link>  
+            
+            {/* <button onClick={handleFormSubmit} type="submit" >Submit</button> */}
     
           
         </div>
