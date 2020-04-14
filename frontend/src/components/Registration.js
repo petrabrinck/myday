@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './registration.css' 
+import { MyDay } from './MyDay'
 
 
 const URL = 'https://authorisation-app.herokuapp.com/register'
@@ -13,6 +14,7 @@ export const Registration = () => {
  const[repeat, setRepeat] = useState('')
  const [errorMsg, setErrorMsg] = useState(null)
  const [successMsg, setSuccessMsg] = useState(null)
+//  const [submit, setSubmit] = useState(false)
 
   // To sign up a user.
   const handleFormSubmit = event => {
@@ -65,13 +67,17 @@ export const Registration = () => {
           {errorMsg && <div className="error-message"> {errorMsg} </div>}
           {successMsg && <div className="success-message"> {successMsg} </div>}
     
-          <Link to={`/MyDay/`}>
-            <button onClick={handleFormSubmit} type="submit" >Submit</button>
-          </Link>  
+       
+          <button onClick={handleFormSubmit} type="submit" >Submit</button>
+        
             
             {/* <button onClick={handleFormSubmit} type="submit" >Submit</button> */}
-    
-          
+            {/* <Link to={`/MyDay/`}>
+            <button
+            onClick={() => setSubmit(true)}
+            >Not a member? Sign up</button>
+          </Link> */}
+
         </div>
       </form>
     </section>

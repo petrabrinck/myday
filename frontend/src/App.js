@@ -29,13 +29,11 @@ export const App = () => {
 
           {/* Route for Singing up new member and logging in exicsting member */}
         <Route path="/" exact>    
-        {/* Added exact above */}
-        <div className="authContainer">
-          {/* <Registration /> */}
-          <Login />
-             {/* <Registration /> */}
-        </div>
-        </Route>
+          <div className="authContainer">
+            <Login />
+            <Registration /> 
+          </div>
+        </Route>  
         {/* Route for memberpage   */}
         {/* <Route path="/MemberPage">
           <MemberPage />

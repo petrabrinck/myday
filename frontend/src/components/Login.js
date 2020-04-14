@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {useHistory} from 'react-router'
 // import { Link } from "react-router-dom";
 import './login.css'
-import { Registration } from './Registration'
+// import { Registration } from './Registration'
 
 const URL = 'https://authorisation-app.herokuapp.com/sessions'
 
@@ -11,7 +11,7 @@ export const Login = () => {
   const [password, setPassword] = useState('')
   const [errorMsg, setErrorMsg] = useState(null)
   const history = useHistory()
-  const [submit, setSubmit] = useState(false);
+  // const [submit, setSubmit] = useState(false)
 
   // To log in an exicting member
   const handleFormSubmit = event => {
@@ -46,9 +46,9 @@ export const Login = () => {
     // If user is logged out, show login form
     return (
       <section>
-        {!submit && (
-        <form className="loginForm" onSubmit={event => event.preventDefault()}>
-        {/* <form className="loginForm" onSubmit={handleFormSubmit}> */}
+        {/* {!submit && (
+        <form className="loginForm" onSubmit={event => event.preventDefault()}> */}
+        <form className="loginForm" onSubmit={handleFormSubmit}>
           <h1>
             <strong>Member login</strong>
           </h1>
@@ -81,15 +81,15 @@ export const Login = () => {
             <button type="submit">Login</button>
           </div>
           
-          <div className="submitButton">     
+          {/* <div className="submitButton">     
             <button
             onClick={() => setSubmit(true)}
             >Not a member? Sign up</button>
-          </div>
+          </div> */}
 
         </form>
-         )}
-        {submit && <Registration />}
+        {/* //  )}
+        // {submit && <Registration />} */}
 
       </section>
     );
