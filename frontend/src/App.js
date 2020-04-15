@@ -27,18 +27,18 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
 
-          {/* Route for Singing up new member and logging in exicsting member */}
+        {/* Route for Singing in */}
         <Route path="/" exact>    
           <div className="authContainer">
             <Login />
-            <Registration /> 
           </div>
         </Route>  
-        {/* Route for memberpage   */}
-        {/* <Route path="/MemberPage">
-          <MemberPage />
-        </Route> */}
-
+        {/* Route for registration   */}
+        <Route path="/registration">
+          <div className="authContainer">
+            <Registration /> 
+          </div>
+        </Route>
         <div className="mainContainer">
           <Route path="/MyDay" > 
           {/* <Route path="/" exact>  */}

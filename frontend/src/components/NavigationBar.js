@@ -18,14 +18,22 @@ const leftLinks = (
   </>
 )
 
+const handleLogOut = () => {
+  console.log("Hej!")
+  window.localStorage.removeItem("accessToken")
+  window.localStorage.removeItem("userId")
+}
+
 const rightLinks = (
   <>
-    <a href="#null">Log In</a>
+    <a onClick={handleLogOut} href="/">Log Out</a>
     {/* <a href="#null">Sign Up</a> */}
     <a href="/newReflection/">New Day</a>
     <a href="#null">Your Reflections</a>
   </>
 )
+
+
 
 export const NavigationBar = () => {
     return (

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './registration.css' 
-import { MyDay } from './MyDay'
-
 
 const URL = 'https://authorisation-app.herokuapp.com/register'
 
@@ -14,7 +12,7 @@ export const Registration = () => {
  const[repeat, setRepeat] = useState('')
  const [errorMsg, setErrorMsg] = useState(null)
  const [successMsg, setSuccessMsg] = useState(null)
-//  const [submit, setSubmit] = useState(false)
+
 
   // To sign up a user.
   const handleFormSubmit = event => {
@@ -27,18 +25,20 @@ export const Registration = () => {
     })
       .then(res => {
         if (res.ok) {
-          setSuccessMsg("User created!") // set success message
-          setErrorMsg(false) // set error message to false
+          setSuccessMsg("User created!") 
+          setErrorMsg(false) 
           return res.json()
         }
         else {
-          setErrorMsg("could not create user") // set error message
-          setSuccessMsg(false) // set success message to false
+          setErrorMsg("could not create user") 
+          setSuccessMsg(false) 
           return res.text().then(json => { throw new Error(json) })
         }
       })
-      .then(user => console.log("created user:", user))
-      .catch(err => { console.error(err) }) // previous this code .catch(err =>  console.log('error:', err) )
+      .then(user => {console.log("created user:", user)
+    setTimeout( () => { window.location.href="/"; }, 3000);})
+      .catch(err => { console.error(err) }) 
+
   };  
 
 
@@ -70,13 +70,13 @@ export const Registration = () => {
        
           <button onClick={handleFormSubmit} type="submit" >Submit</button>
         
-            
-            {/* <button onClick={handleFormSubmit} type="submit" >Submit</button> */}
-            {/* <Link to={`/MyDay/`}>
-            <button
-            onClick={() => setSubmit(true)}
-            >Not a member? Sign up</button>
-          </Link> */}
+          <div className="submitButton">   
+            <Link to={`/`}> 
+              <button
+                >Already a member? Sign in
+              </button>
+            </Link> 
+          </div>
 
         </div>
       </form>
