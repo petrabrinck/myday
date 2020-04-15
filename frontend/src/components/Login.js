@@ -82,7 +82,6 @@ export const Login = () => {
           <div className="submitButton">   
           <Link to={`/registration/`}> 
             <button
-          
             >Not a member? Sign up</button>
             </Link> 
           </div>
