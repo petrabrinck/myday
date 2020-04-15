@@ -76,7 +76,7 @@ export const Login = () => {
               required
             ></input>
             {errorMsg && <div className="error-message"> {errorMsg} </div>}
-            <button type="submit" value="">Login</button> 
+            <button type="submit" value="reset">Login</button> 
           </div>
 
           <div className="submitButton">   
