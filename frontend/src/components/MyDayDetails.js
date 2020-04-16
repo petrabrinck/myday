@@ -54,7 +54,7 @@ export const MyDayDetails = props => {
             </div>
           </div>
         </div>
-        <Link className='backLink' to={`/`}>
+        <Link className='backLink' to={`/MyDay`}>
           <p>Back</p>
         </Link>
       </section>
