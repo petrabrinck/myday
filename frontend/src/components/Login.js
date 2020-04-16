@@ -77,15 +77,15 @@ export const Login = () => {
             ></input>
             {errorMsg && <div className="error-message"> {errorMsg} </div>}
             <button type="submit">Login</button>
-          </div>
+          
 
-          <div className="submitButton">   
+          <div className="toRegisterButton">   
           <Link to={`/registration/`}> 
             <button
             >Not a member? Sign up</button>
             </Link> 
           </div>
-
+          </div>
         </form>
       </section>
     );

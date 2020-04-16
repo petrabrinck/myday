@@ -66,8 +66,7 @@ export const Registration = () => {
           {/* success and error messages */}
           {errorMsg && <div className="error-message"> {errorMsg} </div>}
           {successMsg && <div className="success-message"> {successMsg} </div>}
-    
-       
+
           <button onClick={handleFormSubmit} type="submit" >Submit</button>
         
           <div className="submitButton">   
@@ -77,11 +76,9 @@ export const Registration = () => {
               </button>
             </Link> 
           </div>
-
         </div>
       </form>
     </section>
   )
-
-  }
+}
 export default Registration;
