@@ -6,7 +6,7 @@ import moment from 'moment'
 // Petras key
 // const apiKey = `563492ad6f91700001000001445fd59a899a466da3ee7ee1490f5d14`
 const apiKey = `563492ad6f917000010000016674d16c530e444482c459f1837b2a47`
-const url = "https://api.pexels.com/v1/search?query=example+raindrop&per_page=70&page=4"
+const url = "https://api.pexels.com/v1/search?query=example+raindrop&per_page=85&page=5"
 const reflectionsUrl ="https://myday-reflection.herokuapp.com/"
 // const reflectionsUrl = "http://localhost:9000/"
 

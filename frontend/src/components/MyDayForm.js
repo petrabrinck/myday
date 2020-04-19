@@ -83,7 +83,7 @@ export const MyDayForm = props => {
               rows='3'
               onChange={event => setQuestions4(event.target.value)}
               ></textarea> 
-            </section>
+          </section>
           <button className="submitBtn"
             onClick={(event) => handleSubmit(event)}
             >Submit / Back
