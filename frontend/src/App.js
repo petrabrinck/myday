@@ -8,8 +8,8 @@ import { Login } from './components/Login'
 import { Registration } from './components/Registration'
 
 
-const url = "https://myday-reflection.herokuapp.com/"
-// const url = "http://localhost:9000/"
+// const url = "https://myday-reflection.herokuapp.com/"
+const url = "http://localhost:9000/"
 
 export const App = () => {
   const [postedReflection, setPostedReflection] = useState("")
@@ -27,20 +27,20 @@ export const App = () => {
     <BrowserRouter>
       <Switch>
 
-        {/* Route for Singing in */}
+        {/* Route for sign-in */}
         <Route path="/" exact>    
           <div className="authContainer">
             <Login />
           </div>
         </Route>  
-        {/* Route for registration   */}
+        {/* Route for registration */}
         <Route path="/registration">
           <div className="authContainer">
             <Registration /> 
           </div>
         </Route>
         <div className="mainContainer">
-          <Route path="/MyDay" > 
+          <Route path="/myDay" > 
           {/* <Route path="/" exact>  */}
             <Header />
             <MyDay /> 
@@ -50,6 +50,7 @@ export const App = () => {
           </Route>
           <Route path="/reflections/:reflectionId/">
             <MyDayDetails feelings={feeling}/>
+            {/* <MyDayDetails feelings={postedReflection}/> */}
           </Route>
         </div>
       </Switch>

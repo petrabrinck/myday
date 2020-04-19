@@ -10,28 +10,28 @@ export const Header = () => {
   return (
     <section className='headerSection'>
       <NavigationBar />
-      <div class="header-icons">
-          <div class="hIconCircle">
+      <div className="header-icons">
+          <div className="hIconCircle">
             <a href="https://www.linkedin.com/in/theresa-ulwahn-b719259/" target="_blank">
               <img
                 src={Linkedin} target="_blank"
-                class="hIconImg"
+                className="hIconImg"
                 alt="LinkedInLogo"
             /></a>
           </div>
-          <div class="hIconCircle">
+          <div className="hIconCircle">
             <a href="https://www.facebook.com/theresa.ulwahn?ref=bookmarks" target="_blank">
               <img
                 src={Facebook} target="_blank"
-                class="hIconImg"
+                className="hIconImg"
                 alt="FacebookLogo"
             /></a>
           </div>
-          <div class="hIconCircle">
+          <div className="hIconCircle">
             <a href="https://www.instagram.com/fruulw/" target="_blank">
               <img
                 src={Instagram} target="_blank"
-                class="hIconImg"
+                className="hIconImg"
                 alt="InstagramLogo"
             /></a>
           </div>
