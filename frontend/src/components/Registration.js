@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './registration.css' 
 
-const URL = 'https://authorisation-app.herokuapp.com/register'
+const url = "https://myday-reflection.herokuapp.com/"
+// const URL = 'https://authorisation-app.herokuapp.com/register'
 //const URL = 'http://localhost:9000/register'
 
 
