@@ -1,18 +1,19 @@
 
 .authContainer {
-    /* height: auto; */
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #5b720d;
-    /* position: absolute; */
+  /* height: auto; */
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #5b720d;
+ 
   }
 
 @media only screen and (min-width: 768px) {
 	.authContainer {
 		display: inline-flex;
 		text-align: center;
-		width: -webkit-fill-available;
+    width: -webkit-fill-available;
+    position: absolute;
 	}
 }
