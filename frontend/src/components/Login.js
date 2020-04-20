@@ -50,6 +50,10 @@ export const Login = () => {
     return (
       <section>
         <form className="loginForm" onSubmit={handleFormSubmit}>
+
+          <a className="brand" href="#null">
+            <p>My Day</p>
+          </a>
           <h1>
             <strong>Member login</strong>
           </h1>

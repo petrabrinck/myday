@@ -10,6 +10,15 @@
   font-size: 20px;
   border: none;
 }
+
+.brand p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  color: #80f8e6;
+  padding: 0;
+  margin: 13px 0px 32px 0;
+  text-align: center;
+}
   
 .registrationForm h1 {
   margin: 5px 10px 5px 0;
@@ -83,5 +92,8 @@
 @media only screen and (min-width: 768px) {
   .registrationForm {
     border: 1px solid #a1b16d;
+    margin-top: 150px;
+    margin-bottom: 325px;
+    
   }
 }

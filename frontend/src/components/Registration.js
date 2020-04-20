@@ -49,7 +49,9 @@ export const Registration = () => {
   return (
     <section>
       <form onSubmit={handleFormSubmit} className="registrationForm" >
-        
+        <a className="brand" href="#null">
+          <p>My Day</p>
+        </a>
         <h1><strong>Sign up</strong></h1>
         <h2>Not a member? Fill in this form and you're set!</h2>
         <div className="infoContainer">  
