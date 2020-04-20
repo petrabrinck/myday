@@ -66,6 +66,20 @@
   margin-top: 20px;
 }
 
+.toSignInButton {
+  align-self: center;
+  color: #5b720d;
+  font-size: 15px;
+  border: #fff;
+  border-radius: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 9px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
 @media only screen and (min-width: 768px) {
   .registrationForm {
     border: 1px solid #a1b16d;

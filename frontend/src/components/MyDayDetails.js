@@ -39,14 +39,14 @@ export const MyDayDetails = props => {
           </div>
           <div className="reflectionSummary">
             <h2>Great to see you again!</h2>
-            <h3><span> 🧚🏻‍♀️ </span>Memories from this day <span> 🧚🏻‍♀️ </span></h3> 
+            <h3><span role='img' aria-label='Tingeling'> 🧚🏻‍♀️ </span>Memories from this day <span role='img' aria-label='Tingeling'> 🧚🏻‍♀️ </span></h3> 
             {feelings.map((item, index) => {
               if (savedFeelings[index] === 'true') {
                 return <h3 key={index}>{item}</h3>
               }
             })}
             <div className='summary'>
-              <span> 🧚🏻‍♀️ </span>
+              <span role='img' aria-label='Tingeling'> 🧚🏻‍♀️ </span>
               <h3>I admire: {reflection.messagePeople}</h3>
               <h3>I'm grateful for: {reflection.messageGrateful}</h3>
               <h3>I look forward to: {reflection.messageLookForward}</h3>

@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './registration.css' 
 
-// const url = "https://myday-reflection.herokuapp.com/"
+// const url = 'https://myday-reflection.herokuapp.com/register'
 const URL = 'https://authorisation-app.herokuapp.com/register'
-//const URL = 'http://localhost:9000/register'
+// const URL = 'https://project20-auth.herokuapp.com/register'
+// const URL = 'http://localhost:9000/register'
 
 
 export const Registration = () => {
@@ -27,7 +28,7 @@ export const Registration = () => {
     })
       .then(res => {
         if (res.ok) {
-          setSuccessMsg("User created!") 
+          setSuccessMsg("User created - we'll send you back to log-in now!") 
           setErrorMsg(false) 
           return res.json()
         }
@@ -41,16 +42,16 @@ export const Registration = () => {
     setTimeout( () => { window.location.href="/"; }, 3000);})
       .catch(err => { console.error(err) }) 
 
-  };  
+  }
 
 
   // If user is logged out, show login form
   return (
     <section>
       <form onSubmit={handleFormSubmit} className="registrationForm" >
-      
-      <h1><strong>Sign up</strong></h1>
-      <h2>Not a member? Fill in this form and you're set!</h2>
+        
+        <h1><strong>Sign up</strong></h1>
+        <h2>Not a member? Fill in this form and you're set!</h2>
         <div className="infoContainer">  
           <label>Name:</label> 
           <input value={name} placeholder="Enter Name" type="text" name="name" onChange={event => setName(event.target.value)} required></input>
@@ -71,7 +72,7 @@ export const Registration = () => {
 
           <button onClick={handleFormSubmit} type="submit" >Submit</button>
         
-          <div className="submitButton">   
+          <div className="toSignInButton">   
             <Link to={`/`}> 
               <button
                 >Already a member? Sign in

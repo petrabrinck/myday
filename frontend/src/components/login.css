@@ -1,11 +1,13 @@
 /*****LOGIN/FORM********/
 .authContainer {
-  height: auto;
+  /* height: auto; */
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background-color: #5b720d;
+  position: absolute;
+ 
 }
 
 .loginForm {  
@@ -92,16 +94,16 @@
   margin-top: 20px;
 }
 
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 650px) {
+
   .authContainer {
-  align-items: flex-end;
-  /* max-width: 33%; */
-  padding: 10px;
-  margin: 0px 35px;
+    display: inline-flex;
+    text-align: center;
+    width: -webkit-fill-available;
   }
 
   .loginForm {
     border: 1px solid #a1b16d;
   }
-
 }

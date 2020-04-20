@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import {useHistory} from 'react-router'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 import './login.css'
 // import { Registration } from './Registration'
 
-// const url = "https://myday-reflection.herokuapp.com/"
+// const url = 'https://myday-reflection.herokuapp.com/sessions'
 const URL = 'https://authorisation-app.herokuapp.com/sessions'
+// const URL = 'https://project20-auth.herokuapp.com/sessions'
 // const URL = 'http://localhost:9000/sessions'
 
 export const Login = () => {
@@ -17,7 +18,7 @@ export const Login = () => {
 
   // To log in an exicting member
   const handleFormSubmit = event => {
-    event.preventDefault();
+    event.preventDefault()
 
     fetch(URL, {
       method: 'POST',
@@ -43,7 +44,7 @@ export const Login = () => {
         }
       })
       .catch((err) => console.log('error:', err))
-  };
+  }
 
     // If user is logged out, show login form
     return (
@@ -62,7 +63,7 @@ export const Login = () => {
               type="email"
               name="email"
               onChange={(event) => {
-                setEmail(event.target.value);
+                setEmail(event.target.value)
               }}
               required
             ></input>
@@ -73,23 +74,24 @@ export const Login = () => {
               type="password"
               name="password"
               onChange={(event) => {
-                setPassword(event.target.value);
+                setPassword(event.target.value)
               }}
               required
             ></input>
             {errorMsg && <div className="error-message"> {errorMsg} </div>}
-            <button type="submit">Login</button>
-          
-
-          <div className="toRegisterButton">   
-          <Link to={`/registration/`}> 
-            <button
-            >Not a member? Sign up</button>
-            </Link> 
-          </div>
+            <button type="submit">
+              Login
+            </button>
+            <div className="toRegisterButton">   
+              <Link to={`/registration/`}> 
+                <button>
+                  Not a member? Sign up
+                </button>
+              </Link> 
+            </div>
           </div>
         </form>
       </section>
-    );
-  };
+    )
+  }
   export default Login;
