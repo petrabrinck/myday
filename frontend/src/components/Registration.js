@@ -23,7 +23,7 @@ export const Registration = () => {
     
     fetch(URL, {
       method: 'POST',
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ name, email, password, repeat }),
       headers: { 'Content-Type': 'application/json' }
     })
       .then(res => {

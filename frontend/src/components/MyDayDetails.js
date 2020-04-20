@@ -10,8 +10,8 @@ export const MyDayDetails = props => {
   const [savedFeelings, setSavedFeelings] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:9000/reflections/${reflectionId}`)
-      // fetch(`https://myday-reflection.herokuapp.com/reflections/${reflectionId}`)
+    // fetch(`http://localhost:9000/reflections/${reflectionId}`)
+      fetch(`https://myday-reflection.herokuapp.com/reflections/${reflectionId}`)
       .then(res => res.json())
       .then(json => {
         setReflection(json)

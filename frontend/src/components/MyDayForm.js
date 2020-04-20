@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import "./mydayform.css"
 
-const url ="http://localhost:9000"
-// const url ="https://myday-reflection.herokuapp.com/"
+// const url ="http://localhost:9000"
+const url ="https://myday-reflection.herokuapp.com/"
 
 const feelingsChecked = [false, false, false, false, false, false]
 
