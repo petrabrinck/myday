@@ -12,12 +12,12 @@ const navTheme: ThemeProps = {
 
 const navBrand = <a className="brand" href="#null"><p>My Day</p></a>
 
-// const leftLinks = (
-//   <>
-//     <a href="/newReflection/">New Day</a>
-//     {/* <a href="#null">Your Reflections</a> */}
-//   </>
-// )
+const leftLinks = (
+  <>
+    <a href="/newReflection/"></a>
+    {/* <a href="#null">Your Reflections</a> */}
+  </>
+)
 
 const handleLogOut = () => {
   console.log("Hej!")
