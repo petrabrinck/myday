@@ -1,6 +1,7 @@
 nav.nav.nav--animate {
   background-color: #0f211d;
   cursor: pointer;
+  padding-bottom: 50px;
 }
 
 .nav-links__group.right , 
