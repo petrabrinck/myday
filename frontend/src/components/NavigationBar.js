@@ -5,12 +5,19 @@ import './navigationbar.css'
 
 const navTheme: ThemeProps = {
   mainColor: '#80f8e6',
-  menuBgColor: '#80f8e6'
+  menuBgColor: 'darkslategray'
 }
 
 // const navBrand = <a className="brand" href="#null">Base Corp.</a>
 
 const navBrand = <a className="brand" href="#null"><p>My Day</p></a>
+
+// const leftLinks = (
+// <>
+//   <a href="/newReflection/"></a>
+{/* <a href="#null">Your Reflections</a> */ }
+{/* </> */ }
+// )
 
 const handleLogOut = () => {
   console.log("Hej!")
