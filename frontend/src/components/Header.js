@@ -39,11 +39,14 @@ export const Header = () => {
       <div className="headerInfo">
         <h1>My Day </h1>
         <div className="welcomeText">
-          <h4>Most of us have some kind of social media app where we spend time, but there is seldom any space for inner reflections.
-              We believe that it's essential for our wellbeing to reflect on a daily basis. </h4>
+          <h4>Most of us have some kind of social media app where we spend time and regardless if its business or pleasure
+          there is seldom any prive space where you can write your inner reflections.
+          We believe that it's essential for our wellbeing to reflect on a daily basis so we created
+              this journal based on our own wish to actively be more present and appreciative of what we have in our lives today. </h4>
           {/* <h4 className="extraText">Most of us have some kind of social media app where we spend time, but there is seldom any space for inner reflections. 
               We believe that it's essential for our wellbeing to reflect on a daily basis. </h4>  */}
-          <h4> This is a journal where you can write your thoughts and look back at your previous posts. </h4>
+          <h4> This is your space and your time to write some thoughts and save memories. You can create new reflections and
+            look back at your previous ones belox. Enjoy!</h4>
         </div>
       </div>
       <div className="newDayButtonDiv">
