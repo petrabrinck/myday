@@ -4,20 +4,20 @@ import Navbar, { ThemeProps } from '@ovie/react-navbar'
 import './navigationbar.css'
 
 const navTheme: ThemeProps = {
-  mainColor: 'darkslategrey',
-  menuBgColor: 'darkslategrey'
+  mainColor: '#80f8e6',
+  menuBgColor: '#80f8e6'
 }
 
 // const navBrand = <a className="brand" href="#null">Base Corp.</a>
 
 const navBrand = <a className="brand" href="#null"><p>My Day</p></a>
 
-const leftLinks = (
-  <>
-    <a href="/newReflection/"></a>
-    {/* <a href="#null">Your Reflections</a> */}
-  </>
-)
+// const leftLinks = (
+// <>
+//   <a href="/newReflection/"></a>
+{/* <a href="#null">Your Reflections</a> */ }
+{/* </> */ }
+// )
 
 const handleLogOut = () => {
   console.log("Hej!")
@@ -50,7 +50,7 @@ export const NavigationBar = () => {
       <Navbar
         brand={navBrand}
         theme={navTheme}
-        leftLinks={leftLinks}
+        // leftLinks={leftLinks}
         rightLinks={rightLinks}
         shouldAnimate={true}
       />

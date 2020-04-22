@@ -4,11 +4,15 @@ nav.nav.nav--animate {
   padding-bottom: 50px;
 }
 
-.nav-links__group.right , 
-.nav-links__group.left{
+.nav-links__group.right {
   color: #80f8e6;
-}
+  margin-bottom: 10px;
+  text-align: right;
 
+}
+button.burger {
+  margin-bottom: 20px;
+}
 .navMenu a {
   color: #80f8e6;
 }
@@ -16,11 +20,10 @@ nav.nav.nav--animate {
 .navMenu p {
   /* font-family: 'Rock Salt', cursive; */
   font-family: 'Great Vibes', cursive;
-  /* font-family: 'Parisienne', cursive; */
   font-size: 30px;
   color: #80f8e6;
-  padding: 0;
-  margin: 0;
+  /* padding: 0;
+  margin: 0; */
 }
 
 

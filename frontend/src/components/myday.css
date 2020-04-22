@@ -1,16 +1,6 @@
 
 .mainContainer {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url('../assets/forest.jpeg');
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed; */
-  /* background-color: #003934; */
-  /* background-color: #4d6424; */
-  /* background-color: #264140; same color as sliding navbar */
-  background-color: #0f211d;  /*same color as navbar */
-  /* background-color: darkolivegreen; */
+  background-color: #0f211d;  /*same color as navbar */ 
 }
 
 .myDayContainer {

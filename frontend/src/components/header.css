@@ -63,10 +63,6 @@
   margin-bottom: 0;
 } 
 
-/* .extraText h4 {
-  display: none;
-} */
-
 .newDayButtonDiv {
   display: flex;
   justify-content: center;
@@ -78,6 +74,8 @@
   display: flex;
   text-align: center;
   padding-top: 100px;
+  justify-content: flex-end;
+  margin-right: 30px;
 }
 
 .hIconCircle {
@@ -94,13 +92,16 @@
 .hIconImg {
   width: 22px;
   height: 22px;
+} 
+
+.hIconCircle:hover {
+  border: #7f6f54;
 }
 
 @media only screen and (min-width: 768px) {
   .welcomeText h4 {
     max-width: 600px;
   }
-  
 }
 
 /* @media (min-width: 650px) {
