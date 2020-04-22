@@ -12,12 +12,13 @@ https://myday-reflection.herokuapp.com/
 ## Tools and techniques
 
 We used these tools and techniques:
+- Login and registration forms with authorization/tokens
 - Frontend in React 
 - Backend in Node.js
 - MongoDB database
 - Navigation using React Router
 - Should work in Chrome and Safari
-- It is responsive and works on mobile, tablet and phone
+- It is responsive and works on mobile, tablet and Iphone
 
 The challenge we had was to combine the saved message with data to an existing picture fetched from an external API. 
 Initially we could see the data in the database but it wasn't visible in the frontend. When we managed to combine these two techniques, we were able to both save and post the data together with the picture. 
@@ -30,7 +31,6 @@ The vision if we had more time
 - Build our own API with quotes. 
 - Would be to build the site starting with one initial question that leads you further on to a certain type of questions, depending on your state of mind that day. In other words customized questions reflection your initial answer. If you're feeling sad, some comforting words or if you're happy, some exciting quotes or a challenge ie. pay a stranger a nice compliment.
 
-- We would also add links to Instagram / Facebook / LinkedIn
 - Personalize the page with optional backgrounds
 - More questions to the desktop view
 - Adding an animation after completing the reflection to inspire and as a positive boost
