@@ -64,7 +64,6 @@
   background-color: #fff;
   border: 1px solid #ddd;
   background: #f1f1f1;
-  /* border-radius: 15px; /* border gets rounded corners */  
 }
     
 /*changes the color of the button upon hovering*/
@@ -78,7 +77,7 @@
   color: #a1b16d;
   font-size: 15px;
   border: #fff;
-  border-radius: 40px; /* Button gets rounded corners */ ;
+  border-radius: 40px; 
   text-transform: uppercase;
   text-decoration: none;
   padding: 9px;
@@ -101,7 +100,6 @@
   margin-top: 20px;
   width: 220px;
 }
-
 
 @media only screen and (min-width: 768px) {
   .authContainer {

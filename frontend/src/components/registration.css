@@ -66,7 +66,7 @@
   color: #a1b16d;
   font-size: 15px;
   border: #fff;
-  border-radius: 40px; /* Button gets rounded corners */ ;
+  border-radius: 40px;
   text-transform: uppercase;
   text-decoration: none;
   padding: 9px;
@@ -92,8 +92,7 @@
 @media only screen and (min-width: 768px) {
   .registrationForm {
     border: 1px solid #a1b16d;
-    margin-top: 150px;
-    margin-bottom: 325px;
+    margin: 50px 0px
     
   }
 }
