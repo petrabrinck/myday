@@ -28,28 +28,28 @@ export const App = () => {
       <Switch>
 
         {/* Route for sign-in */}
-        <Route path="/" exact>    
+        <Route path="/" exact>
           <div className="authContainer">
             <Login />
           </div>
-        </Route>  
+        </Route>
         {/* Route for registration */}
         <Route path="/registration">
           <div className="authContainer">
-            <Registration /> 
+            <Registration />
           </div>
         </Route>
         <div className="mainContainer">
-          <Route path="/myDay" > 
-          {/* <Route path="/" exact>  */}
+          <Route path="/myDay" >
+            {/* <Route path="/" exact>  */}
             <Header />
-            <MyDay /> 
+            <MyDay />
           </Route>
           <Route path="/newReflection/">
             <MyDayForm feelings={feeling} />
           </Route>
           <Route path="/reflections/:reflectionId/">
-            <MyDayDetails feelings={feeling}/>
+            <MyDayDetails feelings={feeling} />
             {/* <MyDayDetails feelings={postedReflection}/> */}
           </Route>
         </div>

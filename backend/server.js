@@ -3,7 +3,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import mongoose from 'mongoose'
 import crypto from 'crypto'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt-nodejs'
 
 // const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/myday'
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/myday'
@@ -36,22 +36,22 @@ const User = mongoose.model('User', {
 
 // Model for a reflection on MyDay
 const Reflection = mongoose.model('Reflection', {
-  feeling1: { 
+  feeling1: {
     type: String,
   },
-  feeling2: { 
+  feeling2: {
     type: String,
   },
-  feeling3: { 
+  feeling3: {
     type: String,
   },
-  feeling4: { 
+  feeling4: {
     type: String,
   },
-  feeling5: { 
+  feeling5: {
     type: String,
   },
-  feeling6: { 
+  feeling6: {
     type: String,
   },
   messagePeople: {
@@ -90,7 +90,7 @@ const authenticateUser = async (req, res, next) => {
       req.user = user
       next()
     } else {
-      res.status(401).json({loggedOut: true, message: "Please try logging in again"})
+      res.status(401).json({ loggedOut: true, message: "Please try logging in again" })
     }
   } catch (err) {
     res
@@ -119,7 +119,7 @@ app.post('/register', async (req, res) => {
     const user = new User({ name, email, password: bcrypt.hashSync(password) });
     const saved = await user.save();
     res
-      .status(201).json(saved); 
+      .status(201).json(saved);
   } catch (err) {
     console.error(err.message)
     res
@@ -140,13 +140,13 @@ app.get('/users/:id', (req, res) => {
   try {
     res.status(201).json(req.user)
   } catch (err) {
-    res.status(400).json({message: 'could not save user', errors: err.message})
+    res.status(400).json({ message: 'could not save user', errors: err.message })
   }
 })
 
 // Member signing in
 app.post('/sessions', async (req, res) => {
-  try {  
+  try {
     const { email, password } = req.body
 
     const user = await User.findOne({ email }) //retrieve user, can use name too, change in const above in that case
@@ -158,25 +158,25 @@ app.post('/sessions', async (req, res) => {
       res.json({ message: "wrong username or password" })
     }
   } catch (err) {
-    res.status(400).json({  errors: err.errors })
+    res.status(400).json({ errors: err.errors })
   }
 })
 
 // Reflections endpoints
 app.get('/', async (req, res) => {
-  const reflections = await Reflection.find().sort({createdAt: 'desc'}).limit(140).exec()
+  const reflections = await Reflection.find().sort({ createdAt: 'desc' }).limit(140).exec()
   res.json(reflections)
 })
 
 app.post('/', async (req, res) => {
-  const {message} = req.body
+  const { message } = req.body
   console.log(req.body)
   const reflection = new Reflection(req.body)
   try {
     const savedReflection = await reflection.save()
     res.status(201).json(savedReflection)
-  }catch (err) {
-    res.status(400).json({message: 'Could not save your reflection', error: err.errors}) 
+  } catch (err) {
+    res.status(400).json({ message: 'Could not save your reflection', error: err.errors })
   }
 })
 
