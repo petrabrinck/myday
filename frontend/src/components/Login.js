@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import {useHistory} from 'react-router'
+import { useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 import './login.css'
 // import { Registration } from './Registration'
 
-// const url = 'https://myday-reflection.herokuapp.com/sessions'
-const URL = 'https://authorisation-app.herokuapp.com/sessions'
+const URL = 'https://myday-reflection.herokuapp.com/sessions'
+// const URL = 'https://authorisation-app.herokuapp.com/sessions'
 // const URL = 'https://project20-auth.herokuapp.com/sessions'
 // const URL = 'http://localhost:9000/sessions'
 
@@ -40,62 +40,62 @@ export const Login = () => {
         else {
           window.localStorage.setItem("userId", user.userId)
           window.localStorage.setItem("accessToken", user.accessToken)
-          history.push('/MyDay') 
+          history.push('/MyDay')
         }
       })
       .catch((err) => console.log('error:', err))
   }
 
-    // If user is logged out, show login form
-    return (
-      <section>
-        <form className="loginForm" onSubmit={handleFormSubmit}>
+  // If user is logged out, show login form
+  return (
+    <section>
+      <form className="loginForm" onSubmit={handleFormSubmit}>
 
-          <a className="brand" href="#null">
-            <p>My Day</p>
-          </a>
-          <h1>
-            <strong>Member login</strong>
-          </h1>
-          <h2>Welcome back - we've missed you!</h2>
-          <div className="loginContainer">
-            <label>Username/Email: </label>
-            <input
-              value={email}
-              placeholder="Enter Email"
-              minLength="0"
-              type="email"
-              name="email"
-              onChange={(event) => {
-                setEmail(event.target.value)
-              }}
-              required
-            ></input>
-            <label>Password: </label>
-            <input
-              value={password}
-              placeholder="Enter Password"
-              type="password"
-              name="password"
-              onChange={(event) => {
-                setPassword(event.target.value)
-              }}
-              required
-            ></input>
-            {errorMsg && <div className="error-message"> {errorMsg} </div>}
-            <button type="submit">
-              Login
+        <a className="brand" href="#null">
+          <p>My Day</p>
+        </a>
+        <h1>
+          <strong>Member login</strong>
+        </h1>
+        <h2>Welcome back - we've missed you!</h2>
+        <div className="loginContainer">
+          <label>Username/Email: </label>
+          <input
+            value={email}
+            placeholder="Enter Email"
+            minLength="0"
+            type="email"
+            name="email"
+            onChange={(event) => {
+              setEmail(event.target.value)
+            }}
+            required
+          ></input>
+          <label>Password: </label>
+          <input
+            value={password}
+            placeholder="Enter Password"
+            type="password"
+            name="password"
+            onChange={(event) => {
+              setPassword(event.target.value)
+            }}
+            required
+          ></input>
+          {errorMsg && <div className="error-message"> {errorMsg} </div>}
+          <button type="submit">
+            Login
             </button>
-            <div className="toRegisterButton">   
-              <Link to={`/registration/`}> 
-                <button>
-                  Not a member? Sign up
+          <div className="toRegisterButton">
+            <Link to={`/registration/`}>
+              <button>
+                Not a member? Sign up
                 </button>
-              </Link> 
-            </div>
+            </Link>
           </div>
-        </form>
-      </section>
-    )
-  }
-  export default Login;
+        </div>
+      </form>
+    </section>
+  )
+}
+export default Login;
